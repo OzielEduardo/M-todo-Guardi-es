@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Método Guardiões</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS Play CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        fogo: '#FF4D00',
+                        agua: '#0077FF',
+                        terra: '#2E7D32',
+                        ar: '#B0BEC5',
+                        sombra: '#08080A',
+                        sagrado: '#FFD700',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Animation Styles -->
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animate-fade-in {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+
+        body {
+            background-color: #08080A;
+            color: #B0BEC5;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .page {
+            display: none;
+        }
+
+        .page.active {
+            display: block;
+        }
+    </style>
+</head>
+<body class="selection:bg-sagrado selection:text-sombra">
+
+    <!-- Global Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-sombra/90 backdrop-blur-xl border-b border-white/[0.03]" id="global-nav">
+        <div class="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">
+            <a href="#" onclick="showPage('home')" class="flex items-center gap-3 group px-0 m-0 border-0 outline-none">
+                <div class="w-12 h-12 flex items-center justify-center">
+                    <img src="https://lh3.googleusercontent.com/d/1gNAqtTkkfhRBu5kjOUrtXaW-EZ2Qzdn5" alt="Logo" class="w-full h-full object-contain" referrerPolicy="no-referrer">
+                </div>
+                <span class="text-xl font-display font-bold tracking-wider group-hover:text-sagrado transition-colors uppercase text-white">MÉTODO GUARDIÕES</span>
+            </a>
+            
+            <div class="flex items-center gap-4">
+                <a href="https://www.instagram.com/metodo_guardioes/" target="_blank" class="text-sagrado/60 hover:text-sagrado transition-colors p-2">
+                    <i data-lucide="instagram" class="w-5 h-5"></i>
+                </a>
+                <div class="hidden md:flex items-center gap-4">
+                    <a href="#" onclick="showPage('lore')" class="text-sagrado hover:bg-sagrado/10 px-5 py-2 rounded-full font-bold transition-all border border-sagrado/20 text-sm">Os Guardiões</a>
+                    <a href="#" onclick="showPage('accessories')" class="text-sagrado hover:bg-sagrado/10 px-5 py-2 rounded-full font-bold transition-all border border-sagrado/20 text-sm">Acessórios</a>
+                    <a href="https://guardian-quest-form.lovable.app" target="_blank" class="bg-sagrado text-sombra hover:bg-white px-6 py-2 rounded-full font-bold transition-all text-sm shadow-lg shadow-sagrado/20">Tenho interesse</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Secondary Nav for Internal Pages -->
+    <nav class="fixed top-0 w-full z-50 bg-sombra/90 backdrop-blur-xl border-b border-white/[0.03] hidden" id="internal-nav">
+        <div class="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">
+            <a href="#" onclick="showPage('home')" class="flex items-center gap-2 group">
+                <i data-lucide="arrow-left" class="w-5 h-5 text-sagrado group-hover:-translate-x-1 transition-transform"></i>
+                <span class="text-sm font-medium opacity-60 group-hover:opacity-100 transition-opacity uppercase tracking-widest text-white">Voltar para Início</span>
+            </a>
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 flex items-center justify-center">
+                    <img src="https://lh3.googleusercontent.com/d/1gNAqtTkkfhRBu5kjOUrtXaW-EZ2Qzdn5" alt="Logo" class="w-full h-full object-contain" referrerPolicy="no-referrer">
+                </div>
+                <span class="text-sm font-display font-bold tracking-wider hidden sm:inline-block text-white">MÉTODO GUARDIÕES</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- PAGE: HOME -->
+    <div id="home" class="page active">
+        <!-- Hero -->
+        <section class="relative min-h-[90vh] flex items-center pt-20 overflow-hidden">
+            <div class="absolute top-1/4 -left-1/4 w-[500px] h-[500px] bg-fogo/5 blur-[140px] rounded-full"></div>
+            <div class="absolute bottom-1/4 -right-1/4 w-[500px] h-[500px] bg-agua/5 blur-[140px] rounded-full"></div>
+            <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center relative z-10">
+                <div class="animate-fade-in">
+                    <span class="inline-block px-4 py-1 rounded-full bg-white/[0.03] text-sagrado border border-white/10 text-xs font-bold mb-6 uppercase tracking-[0.2em]">Guardiões dos Elementos</span>
+                    <h1 class="text-5xl md:text-7xl font-display font-bold leading-[1.1] mb-6 tracking-tighter text-white">
+                        Método <span class="text-sagrado italic font-medium">Guardiões</span>
+                    </h1>
+                    <p class="text-lg text-ar leading-relaxed mb-8 max-w-xl opacity-80">
+                        Um programa de formação de identidade e mentalidade infantil que utiliza inteligência emocional, neurociência, breathwork e disciplina marcial para construir crianças emocionalmente fortes, seguras e preparadas para a vida.
+                    </p>
+                </div>
+                <div class="relative flex items-center justify-center p-4 animate-fade-in">
+                    <div class="relative z-10 w-full max-w-lg aspect-square overflow-hidden group">
+                        <img src="https://lh3.googleusercontent.com/d/1gNAqtTkkfhRBu5kjOUrtXaW-EZ2Qzdn5" alt="Hero" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" referrerPolicy="no-referrer">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dores -->
+        <section class="py-24 relative overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 relative z-10">
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    <div class="relative group rounded-[3rem] overflow-hidden shadow-2xl shadow-fogo/10 border border-white/5 order-2 lg:order-1">
+                        <img src="https://lh3.googleusercontent.com/d/1X7CknNRJ2cPMsSpdhugmF7xf7kgDFspk" alt="Digital" class="w-full aspect-square object-cover grayscale contrast-125 opacity-70" referrerPolicy="no-referrer">
+                        <div class="absolute inset-0 bg-gradient-to-t from-sombra via-transparent to-transparent opacity-60"></div>
+                    </div>
+                    <div class="order-1 lg:order-2">
+                        <span class="text-sagrado font-bold uppercase tracking-widest text-sm mb-4 block">Você reconhece isso?</span>
+                        <h2 class="text-3xl md:text-5xl font-bold mb-6 tracking-tight text-white">O que nenhuma aula <span class="text-ar/40 whitespace-pre italic">convencional</span> resolve</h2>
+                        <p class="text-lg text-ar mb-12 opacity-80 leading-relaxed font-light">Seu filho pode ter acesso à melhor escola, ao melhor esporte — e ainda assim enfrentar desafios que nenhum conteúdo técnico resolve.</p>
+                        <div class="grid sm:grid-cols-2 gap-6" id="grid-dores"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Beliefs -->
+        <section class="py-24 relative overflow-hidden bg-black/40">
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="max-w-3xl mx-auto text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6 leading-tight text-white">
+                        Mas o problema não está no <span class="text-fogo bg-fogo/10 px-2">comportamento</span> da criança…
+                        <br>
+                        <span class="text-lg md:text-xl opacity-60 font-light mt-4 block">Está no que foi instalado nela sem perceber.</span>
+                    </h2>
+                </div>
+                <div class="grid md:grid-cols-2 gap-16 items-start">
+                    <div class="space-y-8">
+                        <div class="p-8 rounded-3xl bg-white/[0.02] border border-white/5 space-y-6">
+                            <h3 class="text-sagrado font-bold uppercase tracking-wide text-sm">Desde cedo, toda criança forma crenças sobre:</h3>
+                            <ul class="space-y-4">
+                                <li class="flex items-center gap-3 text-lg font-medium text-white"><div class="w-1.5 h-1.5 rounded-full bg-sagrado"></div>Quem ela é</li>
+                                <li class="flex items-center gap-3 text-lg font-medium text-white"><div class="w-1.5 h-1.5 rounded-full bg-sagrado"></div>O que ela consegue</li>
+                                <li class="flex items-center gap-3 text-lg font-medium text-white"><div class="w-1.5 h-1.5 rounded-full bg-sagrado"></div>Até onde pode ir</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <div class="p-10 rounded-[3rem] bg-gradient-to-br from-sagrado/10 to-transparent border border-sagrado/20 relative z-10 backdrop-blur-sm">
+                            <span class="text-sagrado font-bold uppercase tracking-[0.3em] text-[10px] mb-8 block">A virada</span>
+                            <h3 class="text-2xl md:text-3xl font-bold mb-8 leading-tight text-white">Enquanto o mundo tenta reprogramar adultos…</h3>
+                            <p class="text-lg md:text-2xl font-bold text-white leading-relaxed">O <span class="text-sagrado">Método Guardiões</span> atua antes disso acontecer.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lore Preview Section -->
+        <section class="py-24 relative overflow-hidden bg-black/20">
+            <div class="max-w-7xl mx-auto px-4 relative z-10">
+                <div class="flex flex-col lg:flex-row gap-16 items-center">
+                    <div class="lg:w-1/2">
+                        <span class="text-sagrado font-bold uppercase tracking-widest text-sm mb-4 block">A Ordem Milenar</span>
+                        <h2 class="text-4xl md:text-6xl font-bold tracking-tighter leading-tight text-white">Os <span class="text-sagrado italic font-medium">Guardiões</span></h2>
+                        <p class="text-xl text-ar/80 leading-relaxed font-light mb-8">No Japão feudal, existia uma ordem respeitada não pela força bruta, mas pela maestria sobre a própria mente.</p>
+                        <a href="#" onclick="showPage('lore')" class="inline-flex items-center gap-3 bg-sagrado text-sombra px-8 py-4 rounded-2xl font-bold hover:bg-white transition-all shadow-lg shadow-sagrado/20 group">
+                            Conheça a história completa <i data-lucide="scroll" class="w-5 h-5 group-hover:rotate-12 transition-transform"></i>
+                        </a>
+                    </div>
+                    <div class="lg:w-1/2 relative">
+                        <div class="aspect-[4/5] rounded-[3rem] overflow-hidden border border-white/10 relative group">
+                            <img src="https://lh3.googleusercontent.com/d/1wkZ-1TKY9YoeWjUtR8-at2WPJh8JuE3v" alt="Lore Image" class="w-full h-full object-cover grayscale brightness-[0.7] contrast-125" referrerPolicy="no-referrer">
+                            <div class="absolute inset-0 bg-gradient-to-t from-sombra via-transparent to-transparent opacity-60"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Home -->
+        <section class="py-32 relative overflow-hidden bg-sombra">
+            <div class="max-w-3xl mx-auto px-4 text-center relative z-10">
+                <h2 class="text-4xl md:text-5xl font-bold mb-8 tracking-tighter text-white">Deseja conhecer o <span class="text-sagrado">Método Guardiões</span>?</h2>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
+                    <a href="#" onclick="showPage('method')" class="bg-white text-sombra px-10 py-5 rounded-2xl font-bold text-base hover:bg-sagrado transition-colors">A Metodologia</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Home Footer -->
+        <footer class="py-12 border-t border-white/[0.03] bg-sombra text-center">
+            <p class="text-ar/40 text-sm font-medium">© 2026 Método Guardiões. Todos os direitos reservados.</p>
+        </footer>
+    </div>
+
+    <!-- PAGE: LORE -->
+    <div id="lore" class="page">
+        <div class="fixed inset-0 pointer-events-none z-0">
+            <img src="https://lh3.googleusercontent.com/d/1wkZ-1TKY9YoeWjUtR8-at2WPJh8JuE3v" alt="BG" class="w-full h-full object-cover grayscale opacity-[0.05] contrast-125 brightness-50" referrerPolicy="no-referrer">
+            <div class="absolute inset-0 bg-gradient-to-b from-sombra via-transparent to-sombra"></div>
+        </div>
+        <header class="pt-40 pb-20 px-4 relative text-center z-10">
+            <span class="inline-block px-4 py-1 rounded-full bg-sagrado/10 text-sagrado border border-sagrado/20 text-[10px] font-bold uppercase tracking-[0.3em] mb-8">A História e o Legado</span>
+            <h1 class="text-5xl md:text-8xl font-display font-bold tracking-tighter mb-8 leading-[0.9] text-white">OS <span class="text-sagrado italic font-medium">GUARDIÕES</span></h1>
+            <p class="text-xl md:text-2xl text-ar/80 font-light leading-relaxed max-w-2xl mx-auto italic">"Antes de vencer o mundo, seu filho precisa aprender a vencer a si mesmo."</p>
+        </header>
+        <main class="max-w-4xl mx-auto px-4 pb-32 relative z-10" id="lore-content"></main>
+    </div>
+
+    <!-- PAGE: METHOD -->
+    <div id="method" class="page">
+        <header class="pt-40 pb-20 px-4 text-center">
+            <span class="inline-block px-4 py-1 rounded-full bg-sagrado/10 text-sagrado border border-sagrado/20 text-[10px] font-bold uppercase tracking-[0.2em] mb-8">Aprofundamento Metodológico</span>
+            <h1 class="text-4xl md:text-6xl font-display font-bold tracking-tighter mb-8 leading-[1.1] text-white">O Princípio Fundamental e a <span class="text-sagrado italic font-medium">Disrupção do Comportamento</span></h1>
+        </header>
+        <main class="max-w-4xl mx-auto px-4 pb-32 space-y-24" id="method-content"></main>
+    </div>
+
+    <!-- PAGE: ACCESSORIES -->
+    <div id="accessories" class="page">
+        <header class="pt-40 pb-20 px-4 text-center">
+            <h1 class="text-4xl md:text-7xl font-bold mb-6 tracking-tighter uppercase italic text-white">Acessórios</h1>
+            <p class="text-sagrado text-xl font-medium mb-8 uppercase tracking-[0.2em]">Equipamentos Oficiais</p>
+        </header>
+        <main class="max-w-7xl mx-auto px-4 pb-24 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" id="accessories-grid"></main>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        // Init Lucide
+        lucide.createIcons();
+
+        // Single Page Routing
+        function showPage(pageId) {
+            document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+            document.getElementById(pageId).classList.add('active');
+            window.scrollTo(0, 0);
+
+            // Toggle Navigation Styles
+            if (pageId === 'home') {
+                document.getElementById('global-nav').style.display = 'block';
+                document.getElementById('internal-nav').style.display = 'none';
+            } else {
+                document.getElementById('global-nav').style.display = 'none';
+                document.getElementById('internal-nav').style.display = 'block';
+            }
+        }
+
+        // Render Dores Content
+        const dores = [
+            { title: "Falta de disciplina", desc: "Crianças sem rotina clara e limites definidos.", icon: 'wind' },
+            { title: "Baixa autoconfiança", desc: "A insegurança afeta o desempenho escolar e social.", icon: 'shield' },
+            { title: "Dificuldade emocional", desc: "Sem ferramentas, crianças não lidam com frustrações.", icon: 'heart' },
+            { title: "Falta de engajamento", desc: "Métodos tradicionais não capturam a atenção.", icon: 'flame' }
+        ];
+
+        const doresContainer = document.getElementById('grid-dores');
+        dores.forEach(d => {
+            const div = document.createElement('div');
+            div.className = 'p-8 rounded-[2rem] bg-white/[0.02] border border-white/5 hover:border-sagrado/20 transition-all group';
+            div.innerHTML = `
+                <div class="w-10 h-10 rounded-xl bg-white/[0.03] flex items-center justify-center mb-6 group-hover:bg-sagrado/10">
+                    <i data-lucide="${d.icon}" class="w-5 h-5 text-sagrado/40 group-hover:text-sagrado"></i>
+                </div>
+                <h3 class="text-lg font-bold mb-3 text-white">${d.title}</h3>
+                <p class="text-sm opacity-50 leading-relaxed font-light">${d.desc}</p>
+            `;
+            doresContainer.appendChild(div);
+        });
+
+        // Render Lore Content
+        const loreContent = `
+            <section class="space-y-16">
+                <div class="prose prose-invert prose-lg max-w-none space-y-8">
+                    <p class="text-2xl font-light border-l-2 border-sagrado/30 pl-8 italic text-white/90">
+                        No período mais instável do Japão feudal, quando guerras entre clãs eram constantes e a honra de um homem valia mais que sua própria vida, existia uma ordem pouco conhecida… mas profundamente respeitada.
+                    </p>
+                    <div class="space-y-4 text-white/80">
+                        <p>Eles não eram os mais fortes no campo de batalha. Nem os mais temidos.</p>
+                        <p class="text-2xl font-bold text-white">Mas eram os mais difíceis de quebrar.</p>
+                        <p>Eles eram chamados de <span class="text-sagrado font-bold">Guardiões</span>.</p>
+                    </div>
+                </div>
+
+                <div class="space-y-8">
+                    <h2 class="text-3xl font-bold text-white">🏯 A ORIGEM</h2>
+                    <div class="space-y-6 text-ar/80">
+                        <p>Enquanto samurais eram treinados para servir seus senhores, os Guardiões seguiam um caminho diferente. Eles eram treinados para dominar algo que nenhum inimigo poderia atacar: a própria mente.</p>
+                        <p>A ordem nasceu em um dojo isolado nas montanhas, fundada por um antigo guerreiro que havia sobrevivido a inúmeras batalhas. Não por ser o mais forte. Mas por nunca perder o controle de si.</p>
+                        <div class="p-8 rounded-3xl bg-white/[0.02] border border-white/5">
+                            <p class="text-xl italic font-serif text-sagrado">“Um guerreiro não é derrotado quando cai… mas quando perde o controle.”</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white/[0.02] border border-white/5 rounded-3xl p-10 space-y-8">
+                    <h2 class="text-2xl font-bold text-white">⚔️ O CAMINHO DOS GUARDIÕES</h2>
+                    <div class="grid md:grid-cols-2 gap-8 text-ar/70">
+                        <div class="space-y-4">
+                            <p>Diferente dos outros, o treinamento não começava com combate. Começava com o invisível.</p>
+                            <ul class="space-y-2">
+                                <li>• Controle emocional</li>
+                                <li>• Disciplina</li>
+                                <li>• Foco</li>
+                                <li>• Resiliência</li>
+                                <li>• Consciência</li>
+                            </ul>
+                        </div>
+                        <div class="bg-sombra/50 p-6 rounded-2xl border border-white/5">
+                            <p class="text-white font-bold mb-4">Antes de lutar, aprendiam a:</p>
+                            <p>Não reagir impulsivamente… não desistir diante da dificuldade… e não se perder dentro de si mesmos.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-8">
+                    <h2 class="text-3xl font-bold text-white">🧠 O VERDADEIRO PODER</h2>
+                    <div class="space-y-6 text-ar/80">
+                        <p>Os Guardiões sabiam que a maior batalha não acontecia no campo de guerra. Acontecia dentro de cada um: Medo, Raiva, Insegurança. Eles não ignoravam essas emoções, aprendiam a controlá-las.</p>
+                        <p class="text-2xl text-sagrado font-bold italic border-t border-white/5 pt-8">"Sem controle interno, não existe força real."</p>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="p-8 bg-white/[0.02] border border-white/5 rounded-3xl">
+                        <h4 class="text-white font-bold mb-4">🔥 A MISSÃO</h4>
+                        <p class="text-sm">Existiam para formar pessoas. Em tempos de guerra, protegiam vilarejos. Em tempos de paz, formavam jovens. Criavam indivíduos preparados para a vida.</p>
+                    </div>
+                    <div class="p-8 bg-sagrado/5 border border-sagrado/10 rounded-3xl">
+                        <h4 class="text-white font-bold mb-4">🌎 O LEGADO</h4>
+                        <p class="text-sm">O princípio dos Guardiões nunca deixou de existir. Ele apenas aguardava o momento certo para retornar. Hoje, esse caminho renasce.</p>
+                    </div>
+                </div>
+
+                <div class="bg-sagrado/5 p-12 rounded-[3.5rem] border border-sagrado/20 text-center space-y-12">
+                   <div class="space-y-4">
+                       <h2 class="text-4xl font-bold text-white">🥋 O <span class="text-sagrado">MÉTODO</span> GUARDIÕES</h2>
+                       <p class="text-ar/60">O Renascimento de uma Filosofia</p>
+                   </div>
+                   <p class="text-ar/80 max-w-2xl mx-auto">Potencializado por conhecimentos modernos como Neurociência, Técnicas de respiração (breathwork) e Inteligência Emocional infantil.</p>
+                   <div class="space-y-6">
+                       <p class="text-3xl text-sagrado font-black tracking-tight leading-tight">“Antes de vencer o mundo… seu filho precisa aprender a vencer a si mesmo.”</p>
+                       <a href="https://guardian-quest-form.lovable.app" target="_blank" class="inline-block bg-sagrado text-sombra px-10 py-5 rounded-2xl font-black text-lg transition-all hover:scale-105 shadow-2xl shadow-sagrado/20">Tenho interesse</a>
+                   </div>
+                </div>
+            </section>
+        `;
+        document.getElementById('lore-content').innerHTML = loreContent;
+
+        // Render Method Content
+        const methodContent = `
+            <section class="space-y-8 text-white/80">
+                <p class="text-2xl font-light">Vivemos uma geração de crianças mais ansiosas, impulsivas e emocionalmente fragmentadas.</p>
+                <div class="p-8 bg-white/[0.02] border border-white/5 rounded-3xl">
+                    <p class="text-xl font-serif italic text-sagrado">"Amor incondicional sendo confundido com ausência de limites."</p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="p-8 bg-agua/5 rounded-2xl border border-agua/20">
+                        <h3 class="text-xl font-bold mb-4">Amor Incondicional</h3>
+                        <p class="text-sm opacity-70">O filho precisa ter absoluta segurança de que é amado independente do que faz.</p>
+                    </div>
+                    <div class="p-8 bg-fogo/5 rounded-2xl border border-fogo/20">
+                        <h3 class="text-xl font-bold mb-4">Relação Condicional</h3>
+                        <p class="text-sm opacity-70">Privilégios e autonomia devem ser conquistados através do comportamento.</p>
+                    </div>
+                </div>
+            </section>
+        `;
+        document.getElementById('method-content').innerHTML = methodContent;
+
+        // Render Accessories Content
+        const products = [
+            { name: "Uniforme Oficial", price: "---", img: "https://lh3.googleusercontent.com/d/10IAXDFFxB9v4DX9iY9mH3pvAMn06cINt" },
+            { name: "Camiseta Guardião", price: "---", img: "https://lh3.googleusercontent.com/d/1jAAhcnjVR4xtlHYfY3M2JNT6B9ycPYpp" },
+            { name: "Boné Oficial", price: "---", img: "https://lh3.googleusercontent.com/d/1DJLK3zTTh3GHvtUGcSoM2JGOvQuWrgLY" }
+        ];
+
+        const accGrid = document.getElementById('accessories-grid');
+        products.forEach(p => {
+            const div = document.createElement('div');
+            div.className = 'group bg-white/[0.01] border border-white/[0.03] rounded-[2rem] overflow-hidden';
+            div.innerHTML = `
+                <div class="aspect-[4/5] relative">
+                    <img src="${p.img}" class="w-full h-full object-cover grayscale brightness-75 group-hover:grayscale-0 transition-all duration-700">
+                </div>
+                <div class="p-8 text-center">
+                    <h3 class="text-xl font-bold mb-4">${p.name}</h3>
+                    <p class="text-sagrado font-bold mb-6">Brevemente</p>
+                </div>
+            `;
+            accGrid.appendChild(div);
+        });
+
+        // Initialize icons again for dynamic content
+        lucide.createIcons();
+    </script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+{
+  "name": "metodo-guardioes",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "npx -y serve .",
+    "build": "mkdir -p dist && cp index.html dist/",
+    "start": "npx -y serve dist"
+  }
+}
