@@ -39,7 +39,7 @@ const AccessoriesPage = () => {
                 referrerPolicy="no-referrer"
               />
             </div>
-            <span className="text-sm font-display font-bold tracking-wider uppercase">MÉTODO GUARDIÕES</span>
+            <span className="text-sm font-display font-bold tracking-wider uppercase">GUARDIÕES</span>
           </Link>
         </div>
       </nav>
@@ -152,7 +152,7 @@ const AccessoriesPage = () => {
               referrerPolicy="no-referrer"
             />
           </div>
-          <p className="group-hover:text-sagrado transition-colors">© 2026 MÉTODO GUARDIÕES • LOJA OFICIAL</p>
+          <p className="group-hover:text-sagrado transition-colors">© 2026 GUARDIÕES • LOJA OFICIAL</p>
         </Link>
       </footer>
     </div>

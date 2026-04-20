@@ -33,7 +33,7 @@ const LorePage = () => {
                 referrerPolicy="no-referrer"
               />
             </div>
-            <span className="text-sm font-display font-bold tracking-wider hidden sm:inline-block">MÉTODO GUARDIÕES</span>
+            <span className="text-sm font-display font-bold tracking-wider hidden sm:inline-block">GUARDIÕES</span>
           </div>
         </div>
       </nav>
@@ -203,17 +203,17 @@ const LorePage = () => {
             </div>
           </div>
 
-          {/* O Método Guardiões */}
+          {/* Os Guardiões */}
           <div className="text-center space-y-12 pt-12">
             <div className="space-y-4">
-              <h2 className="text-4xl md:text-6xl font-bold text-white tracking-tighter">🥋 O <span className="text-sagrado">MÉTODO</span> GUARDIÕES</h2>
+              <h2 className="text-4xl md:text-6xl font-bold text-white tracking-tighter">Os <span className="text-sagrado">GUARDIÕES</span></h2>
               <p className="text-ar/50 text-sm font-medium">O Renascimento de uma Filosofia</p>
             </div>
 
             <div className="bg-gradient-to-b from-white/[0.03] to-transparent p-12 rounded-[3.5rem] border border-white/10 max-w-4xl mx-auto shadow-2xl space-y-12">
               <div className="space-y-6 text-left max-w-2xl mx-auto">
                 <p className="text-lg text-ar/80 leading-relaxed">
-                  Hoje, esse caminho renasce. O Método Guardiões não é apenas um treinamento físico.
+                  Hoje, esse caminho renasce. Os Guardiões não são apenas um treinamento físico.
                 </p>
                 <p className="text-xl text-white font-bold leading-relaxed italic">
                   É a continuação de uma filosofia antiga, agora potencializada por conhecimentos modernos como:
@@ -315,7 +315,7 @@ const LorePage = () => {
               referrerPolicy="no-referrer"
             />
           </div>
-          <p className="group-hover:text-sagrado transition-colors">© 2026 MÉTODO GUARDIÕES • LEGADO ANTIGO, TREINAMENTO MODERNO</p>
+          <p className="group-hover:text-sagrado transition-colors">© 2026 GUARDIÕES • LEGADO ANTIGO, TREINAMENTO MODERNO</p>
         </Link>
       </footer>
     </div>

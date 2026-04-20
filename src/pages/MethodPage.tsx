@@ -22,7 +22,7 @@ const MethodPage = () => {
                 referrerPolicy="no-referrer"
               />
             </div>
-            <span className="text-sm font-display font-bold tracking-wider">MÉTODO GUARDIÕES</span>
+            <span className="text-sm font-display font-bold tracking-wider">GUARDIÕES</span>
           </Link>
         </div>
       </nav>
@@ -181,7 +181,7 @@ const MethodPage = () => {
                 <Shield className="w-4 h-4" /> Compromisso com a Relação
               </h4>
               <div className="space-y-4 text-ar/70 text-sm">
-                <p>• O Método Guardiões não substitui os pais — fortalece a relação.</p>
+                <p>• Os Guardiões não substituem os pais — fortalecem a relação.</p>
                 <p>• O Guardião nunca perde seu valor, mas pode perder poderes, pontos ou privilégios.</p>
                 <p>• A identidade é sempre protegida, e o comportamento será sempre treinado.</p>
               </div>
@@ -216,7 +216,7 @@ const MethodPage = () => {
               referrerPolicy="no-referrer"
             />
           </div>
-          <p className="group-hover:text-sagrado transition-colors">© 2026 MÉTODO GUARDIÕES • DESENVOLVIMENTO INFANTIL INTEGRAL</p>
+          <p className="group-hover:text-sagrado transition-colors">© 2026 GUARDIÕES • DESENVOLVIMENTO INFANTIL INTEGRAL</p>
         </Link>
       </footer>
     </div>

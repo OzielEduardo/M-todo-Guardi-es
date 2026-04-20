@@ -31,7 +31,7 @@ const Navigation = () => (
             referrerPolicy="no-referrer"
           />
         </div>
-        <span className="text-xl font-display font-bold tracking-wider group-hover:text-sagrado transition-colors uppercase">MÉTODO GUARDIÕES</span>
+        <span className="text-xl font-display font-bold tracking-wider group-hover:text-sagrado transition-colors uppercase">GUARDIÕES</span>
       </Link>
       <div className="flex items-center gap-4">
         <a
@@ -83,15 +83,13 @@ const Hero = () => (
         transition={{ duration: 0.8 }}
       >
         <span className="inline-block px-4 py-1 rounded-full bg-white/[0.03] text-sagrado border border-white/10 text-xs font-bold mb-6 uppercase tracking-[0.2em]">
-          Guardiões dos Elementos
+          Guardiões
         </span>
         <h1 className="text-5xl md:text-7xl font-display font-bold leading-[1.1] mb-6 tracking-tighter">
           Método <span className="text-sagrado italic font-medium">Guardiões</span>
         </h1>
         <p className="text-lg text-ar leading-relaxed mb-8 max-w-xl opacity-80">
-          Um programa de formação de identidade e mentalidade infantil que utiliza inteligência emocional, 
-          neurociência, breathwork e disciplina marcial para construir crianças emocionalmente fortes, 
-          seguras e preparadas para a vida.
+          Um programa de formação de identidade e mentalidade infantil que utiliza inteligência emocional, neurociência, breathwork e disciplina marcial para construir crianças emocionalmente fortes, seguras e preparadas para a vida.
         </p>
         <div className="flex flex-col sm:flex-row gap-4">
           <div className="flex items-center gap-3 py-2 opacity-50">
@@ -282,7 +280,7 @@ const Beliefs = () => (
             </h3>
             <div className="space-y-6">
               <p className="text-lg md:text-2xl font-bold text-white leading-relaxed">
-                O <span className="text-sagrado">Método Guardiões</span> atua antes disso acontecer.
+                Os <span className="text-sagrado">Guardiões</span> atuam antes disso acontecer.
               </p>
               <div className="space-y-3 pt-6 border-t border-white/5">
                 <p className="text-lg opacity-60 font-light">Não é sobre corrigir depois.</p>
@@ -540,7 +538,7 @@ const CTA = () => (
   <section className="py-32 relative overflow-hidden bg-sombra">
     <div className="max-w-3xl mx-auto px-4 text-center relative z-10">
       <h2 className="text-4xl md:text-5xl font-bold mb-8 tracking-tighter">
-        Deseja aprofundar seu conhecimento sobre o <span className="text-sagrado">Método Guardiões</span>?
+        Deseja aprofundar seu conhecimento sobre os <span className="text-sagrado">Guardiões</span>?
       </h2>
       <p className="text-lg text-ar mb-12 opacity-60 leading-relaxed">
         Disponibilizamos materiais complementares e informações detalhadas sobre como iniciar 
@@ -632,10 +630,10 @@ const Footer = () => (
             referrerPolicy="no-referrer"
           />
         </div>
-        <span className="text-lg font-display font-bold tracking-wider uppercase group-hover:text-sagrado transition-colors">MÉTODO GUARDIÕES</span>
+        <span className="text-lg font-display font-bold tracking-wider uppercase group-hover:text-sagrado transition-colors">GUARDIÕES</span>
       </Link>
       <div className="text-ar/40 text-sm font-medium">
-        © 2026 Método Guardiões. Todos os direitos reservados.
+        © 2026 Guardiões. Todos os direitos reservados.
       </div>
       <div className="flex gap-6">
         {[CheckCircle2, MessageSquare, Shield].map((Icon, i) => (
