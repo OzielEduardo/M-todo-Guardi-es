@@ -205,19 +205,28 @@ const MethodPage = () => {
 
       </main>
 
-      {/* Footer minimal info-style */}
-      <footer className="py-12 border-t border-white/[0.03]">
-        <Link to="/" className="max-w-7xl mx-auto px-4 flex flex-col items-center gap-4 text-ar/30 text-[10px] uppercase tracking-widest font-bold group">
-          <div className="w-12 h-12 flex items-center justify-center opacity-50 group-hover:opacity-100 transition-opacity">
-            <img 
-              src="https://lh3.googleusercontent.com/d/1gNAqtTkkfhRBu5kjOUrtXaW-EZ2Qzdn5" 
-              alt="Logo" 
-              className="w-full h-full object-contain"
-              referrerPolicy="no-referrer"
-            />
-          </div>
-          <p className="group-hover:text-sagrado transition-colors">© 2026 GUARDIÕES • DESENVOLVIMENTO INFANTIL INTEGRAL</p>
-        </Link>
+      <footer className="py-16 border-t border-white/[0.03] bg-black/20">
+        <div className="max-w-7xl mx-auto px-4 flex flex-col items-center gap-10">
+          <Link to="/" className="flex flex-col items-center gap-4 text-ar/30 text-[10px] uppercase tracking-widest font-bold group">
+            <div className="w-12 h-12 flex items-center justify-center opacity-50 group-hover:opacity-100 transition-opacity">
+              <img 
+                src="https://lh3.googleusercontent.com/d/1gNAqtTkkfhRBu5kjOUrtXaW-EZ2Qzdn5" 
+                alt="Logo" 
+                className="w-full h-full object-contain"
+                referrerPolicy="no-referrer"
+              />
+            </div>
+          </Link>
+
+          <nav className="flex flex-wrap justify-center gap-x-10 gap-y-4">
+            <Link to="/" className="text-ar/40 hover:text-sagrado text-[10px] font-bold uppercase tracking-widest transition-colors">Início</Link>
+            <Link to="/lore" className="text-ar/40 hover:text-sagrado text-[10px] font-bold uppercase tracking-widest transition-colors">História</Link>
+            <Link to="/metodo" className="text-ar/40 hover:text-sagrado text-[10px] font-bold uppercase tracking-widest transition-colors">Método</Link>
+            <Link to="/acessorios" className="text-ar/40 hover:text-sagrado text-[10px] font-bold uppercase tracking-widest transition-colors">Acessórios</Link>
+          </nav>
+          
+          <p className="text-ar/20 text-[9px] uppercase tracking-[0.4em] font-bold">© 2026 GUARDIÕES • DESENVOLVIMENTO INFANTIL INTEGRAL</p>
+        </div>
       </footer>
     </div>
   );

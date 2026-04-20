@@ -1,5 +1,6 @@
-import { motion } from "motion/react";
+import { motion, AnimatePresence } from "motion/react";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 import { 
   Shield, 
   Flame,
@@ -16,59 +17,115 @@ import {
   BookOpen,
   Brain,
   Instagram,
-  Scroll
+  Scroll,
+  Menu,
+  X
 } from "lucide-react";
 
-const Navigation = () => (
-  <nav className="fixed top-0 w-full z-50 bg-sombra/90 backdrop-blur-xl border-b border-white/[0.03]">
-    <div className="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">
-      <Link to="/" className="flex items-center gap-3 group">
-        <div className="w-12 h-12 flex items-center justify-center">
-          <img 
-            src="https://lh3.googleusercontent.com/d/1gNAqtTkkfhRBu5kjOUrtXaW-EZ2Qzdn5" 
-            alt="Logo" 
-            className="w-full h-full object-contain"
-            referrerPolicy="no-referrer"
-          />
-        </div>
-        <span className="text-xl font-display font-bold tracking-wider group-hover:text-sagrado transition-colors uppercase">GUARDIÕES</span>
-      </Link>
-      <div className="flex items-center gap-4">
-        <a
-          href="https://www.instagram.com/metodo_guardioes/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-sagrado/60 hover:text-sagrado transition-colors p-2"
-          aria-label="Instagram"
-        >
-          <Instagram className="w-5 h-5" />
-        </a>
-        <div className="hidden md:flex items-center gap-4">
-          <Link 
-            to="/lore"
-            className="text-sagrado hover:bg-sagrado/10 px-5 py-2 rounded-full font-bold transition-all border border-sagrado/20 text-sm"
-          >
-            Os Guardiões
-          </Link>
-          <Link 
-            to="/acessorios"
-            className="text-sagrado hover:bg-sagrado/10 px-5 py-2 rounded-full font-bold transition-all border border-sagrado/20 text-sm"
-          >
-            Acessórios
-          </Link>
-          <a 
-            href="https://guardian-quest-form.lovable.app"
+const Navigation = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  return (
+    <nav className="fixed top-0 w-full z-50 bg-sombra/90 backdrop-blur-xl border-b border-white/[0.03]">
+      <div className="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">
+        <Link to="/" className="flex items-center gap-3 group">
+          <div className="w-12 h-12 flex items-center justify-center">
+            <img 
+              src="https://lh3.googleusercontent.com/d/1gNAqtTkkfhRBu5kjOUrtXaW-EZ2Qzdn5" 
+              alt="Logo" 
+              className="w-full h-full object-contain"
+              referrerPolicy="no-referrer"
+            />
+          </div>
+          <span className="text-xl font-display font-bold tracking-wider group-hover:text-sagrado transition-colors uppercase">GUARDIÕES</span>
+        </Link>
+        <div className="flex items-center gap-4">
+          <a
+            href="https://www.instagram.com/metodo_guardioes/"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-sagrado text-sombra hover:bg-white px-6 py-2 rounded-full font-bold transition-all text-sm shadow-lg shadow-sagrado/20"
+            className="text-sagrado/60 hover:text-sagrado transition-colors p-2"
+            aria-label="Instagram"
           >
-            Tenho interesse
+            <Instagram className="w-5 h-5" />
           </a>
+          
+          {/* Desktop Menu */}
+          <div className="hidden md:flex items-center gap-4">
+            <Link 
+              to="/lore"
+              className="text-sagrado hover:bg-sagrado/10 px-5 py-2 rounded-full font-bold transition-all border border-sagrado/20 text-sm"
+            >
+              Os Guardiões
+            </Link>
+            <Link 
+              to="/acessorios"
+              className="text-sagrado hover:bg-sagrado/10 px-5 py-2 rounded-full font-bold transition-all border border-sagrado/20 text-sm"
+            >
+              Acessórios
+            </Link>
+            <a 
+              href="https://guardian-quest-form.lovable.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-sagrado text-sombra hover:bg-white px-6 py-2 rounded-full font-bold transition-all text-sm shadow-lg shadow-sagrado/20"
+            >
+              Tenho interesse
+            </a>
+          </div>
+
+          {/* Mobile Menu Button */}
+          <button 
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="md:hidden p-2 text-sagrado hover:bg-sagrado/10 rounded-lg transition-colors"
+            aria-label="Toggle Menu"
+          >
+            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
         </div>
       </div>
-    </div>
-  </nav>
-);
+
+      {/* Mobile Menu Overlay */}
+      <AnimatePresence>
+        {isMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            className="md:hidden bg-sombra border-b border-white/[0.03] overflow-hidden"
+          >
+            <div className="px-4 py-8 flex flex-col gap-6">
+              <Link 
+                to="/lore" 
+                onClick={() => setIsMenuOpen(false)}
+                className="text-lg font-bold text-sagrado flex items-center justify-between"
+              >
+                Os Guardiões
+                <ArrowRight className="w-4 h-4 opacity-40" />
+              </Link>
+              <Link 
+                to="/acessorios" 
+                onClick={() => setIsMenuOpen(false)}
+                className="text-lg font-bold text-sagrado flex items-center justify-between"
+              >
+                Acessórios
+                <ArrowRight className="w-4 h-4 opacity-40" />
+              </Link>
+              <a 
+                href="https://guardian-quest-form.lovable.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-sagrado text-sombra px-6 py-4 rounded-2xl font-bold text-center shadow-lg shadow-sagrado/20"
+              >
+                Tenho interesse
+              </a>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </nav>
+  );
+};
 
 const Hero = () => (
   <section className="relative min-h-[90vh] flex items-center pt-20 overflow-hidden">
@@ -635,12 +692,28 @@ const Footer = () => (
       <div className="text-ar/40 text-sm font-medium">
         © 2026 Guardiões. Todos os direitos reservados.
       </div>
-      <div className="flex gap-6">
-        {[CheckCircle2, MessageSquare, Shield].map((Icon, i) => (
-          <div key={i} className="text-ar/40 hover:text-sagrado transition-colors cursor-pointer">
-            <Icon className="w-5 h-5" />
-          </div>
-        ))}
+      <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+        <nav className="flex gap-6">
+          <Link to="/lore" className="text-ar/60 hover:text-sagrado text-sm font-medium transition-colors">História</Link>
+          <Link to="/metodo" className="text-ar/60 hover:text-sagrado text-sm font-medium transition-colors">Método</Link>
+          <Link to="/acessorios" className="text-ar/60 hover:text-sagrado text-sm font-medium transition-colors">Acessórios</Link>
+        </nav>
+        <div className="flex gap-6">
+          <a
+            href="https://www.instagram.com/metodo_guardioes/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-ar/40 hover:text-sagrado transition-colors"
+            aria-label="Instagram"
+          >
+            <Instagram className="w-5 h-5" />
+          </a>
+          {[CheckCircle2, MessageSquare, Shield].map((Icon, i) => (
+            <div key={i} className="text-ar/40 hover:text-sagrado transition-colors cursor-pointer">
+              <Icon className="w-5 h-5" />
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   </footer>
