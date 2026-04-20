@@ -7,11 +7,6 @@
  * This ensures images load across all devices and browsers by bypassing 
  * referrer/CORS restrictions and providing a modern image format.
  */
-/**
- * Helper to proxy Google Drive images through a reliable CDN proxy.
- * This ensures images load across all devices and browsers by bypassing 
- * referrer/CORS restrictions and providing a modern image format.
- */
 const getProxiedURL = (url: string) => `https://images.weserv.nl/?url=${encodeURIComponent(url)}&default=${encodeURIComponent(url)}&l=9&af&il`;
 
 export const IMAGES = {
