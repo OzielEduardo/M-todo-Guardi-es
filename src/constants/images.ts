@@ -1,16 +1,12 @@
 /**
  * Branded Assets for Guardiões
- * Using the official Google Drive Thumbnail endpoint (sz=w1200) combined with a 
- * visibility proxy to ensure 100% uptime and universal access across all devices.
+ * Using a specialized image proxy (Photon) with the thumbnail endpoint to ensure 
+ * maximum visibility across all devices and browsers, including incognito mode.
  */
 
-/**
- * Helper to proxy Google Drive images through a reliable CDN proxy.
- * We use the thumbnail endpoint which is significantly more stable for public sharing.
- */
 const getProxiedURL = (id: string) => {
-  const driveThumbnailUrl = `https://drive.google.com/thumbnail?id=${id}&sz=w1200`;
-  return `https://images.weserv.nl/?url=${encodeURIComponent(driveThumbnailUrl)}&l=9&af&il&default=${encodeURIComponent(driveThumbnailUrl)}`;
+  // Use Photon (i0.wp.com) which is highly resilient for proxying Drive assets
+  return `https://i0.wp.com/drive.google.com/thumbnail?id=${id}&sz=w1200`;
 };
 
 export const IMAGES = {
