@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { ArrowLeft, Shield, Brain, Wind, Swords, BookOpen, UserCheck, Star } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { IMAGES } from "../constants/images";
 
 const MethodPage = () => {
   return (
@@ -16,7 +17,7 @@ const MethodPage = () => {
           <Link to="/" className="flex items-center gap-3">
             <div className="w-12 h-12 flex items-center justify-center">
               <img 
-                src="https://lh3.googleusercontent.com/d/1gNAqtTkkfhRBu5kjOUrtXaW-EZ2Qzdn5" 
+                src={IMAGES.LOGO} 
                 alt="Logo" 
                 className="w-full h-full object-contain"
                 referrerPolicy="no-referrer"
@@ -210,7 +211,7 @@ const MethodPage = () => {
           <Link to="/" className="flex flex-col items-center gap-4 text-ar/30 text-[10px] uppercase tracking-widest font-bold group">
             <div className="w-12 h-12 flex items-center justify-center opacity-50 group-hover:opacity-100 transition-opacity">
               <img 
-                src="https://lh3.googleusercontent.com/d/1gNAqtTkkfhRBu5kjOUrtXaW-EZ2Qzdn5" 
+                src={IMAGES.LOGO} 
                 alt="Logo" 
                 className="w-full h-full object-contain"
                 referrerPolicy="no-referrer"

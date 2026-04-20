@@ -1,6 +1,7 @@
 import { motion, AnimatePresence } from "motion/react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { IMAGES } from "../constants/images";
 import { 
   Shield, 
   Flame,
@@ -31,7 +32,7 @@ const Navigation = () => {
         <Link to="/" className="flex items-center gap-3 group">
           <div className="w-12 h-12 flex items-center justify-center">
             <img 
-              src="https://lh3.googleusercontent.com/d/1gNAqtTkkfhRBu5kjOUrtXaW-EZ2Qzdn5" 
+              src={IMAGES.LOGO} 
               alt="Logo" 
               className="w-full h-full object-contain"
               referrerPolicy="no-referrer"
@@ -163,7 +164,7 @@ const Hero = () => (
       >
         <div className="relative z-10 w-full max-w-lg aspect-square overflow-hidden group">
           <img 
-            src="https://lh3.googleusercontent.com/d/1gNAqtTkkfhRBu5kjOUrtXaW-EZ2Qzdn5" 
+            src={IMAGES.HERO_CHILD} 
             alt="Guardiões dos Elementos" 
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000"
             referrerPolicy="no-referrer"
@@ -197,7 +198,7 @@ const Dores = () => (
           className="relative group rounded-[3rem] overflow-hidden shadow-2xl shadow-fogo/10 border border-white/5 order-2 lg:order-1"
         >
           <img 
-            src="https://lh3.googleusercontent.com/d/1X7CknNRJ2cPMsSpdhugmF7xf7kgDFspk" 
+            src={IMAGES.DORES_CHILD} 
             alt="Criança isolada em dispositivos digitais" 
             className="w-full aspect-square object-cover grayscale contrast-125 opacity-70 group-hover:scale-110 transition-transform duration-1000"
             referrerPolicy="no-referrer"
@@ -398,7 +399,7 @@ const Lore = () => (
             className="aspect-[4/5] rounded-[3rem] overflow-hidden border border-white/10 relative group"
           >
             <img 
-              src="https://lh3.googleusercontent.com/d/1wkZ-1TKY9YoeWjUtR8-at2WPJh8JuE3v" 
+              src={IMAGES.LORE_BG} 
               alt="Legado dos Guardiões" 
               className="w-full h-full object-cover grayscale brightness-[0.7] contrast-125 group-hover:scale-105 transition-transform duration-1000"
               referrerPolicy="no-referrer"
@@ -466,7 +467,7 @@ const Breathwork = () => (
           >
             <div className="aspect-square rounded-[3rem] border border-white/10 overflow-hidden relative group shadow-2xl shadow-ar/20">
               <img 
-                src="https://lh3.googleusercontent.com/d/1wzmcToHiyQrP56pG54lucHKpOC4PNcqE" 
+                src={IMAGES.BREATHWORK} 
                 alt="A Ciência da Respiração" 
                 className="w-full h-full object-cover grayscale contrast-125 brightness-75 group-hover:scale-110 transition-transform duration-1000"
                 referrerPolicy="no-referrer"
@@ -681,7 +682,7 @@ const Footer = () => (
       <Link to="/" className="flex items-center gap-3 group">
         <div className="w-12 h-12 flex items-center justify-center">
           <img 
-            src="https://lh3.googleusercontent.com/d/1gNAqtTkkfhRBu5kjOUrtXaW-EZ2Qzdn5" 
+            src={IMAGES.LOGO} 
             alt="Logo" 
             className="w-full h-full object-contain"
             referrerPolicy="no-referrer"

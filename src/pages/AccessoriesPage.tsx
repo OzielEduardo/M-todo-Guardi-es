@@ -1,6 +1,7 @@
 import { motion, AnimatePresence } from "motion/react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { IMAGES } from "../constants/images";
 import { 
   ArrowLeft, 
   ShoppingBag,
@@ -12,12 +13,12 @@ const AccessoriesPage = () => {
   const [selectedImg, setSelectedImg] = useState<string | null>(null);
 
   const products = [
-    { name: "Uniforme Oficial", price: "---", img: "https://lh3.googleusercontent.com/d/10IAXDFFxB9v4DX9iY9mH3pvAMn06cINt" },
-    { name: "Camiseta Guardião", price: "---", img: "https://lh3.googleusercontent.com/d/1jAAhcnjVR4xtlHYfY3M2JNT6B9ycPYpp" },
-    { name: "Boné Oficial", price: "---", img: "https://lh3.googleusercontent.com/d/1DJLK3zTTh3GHvtUGcSoM2JGOvQuWrgLY" },
-    { name: "Kit Elementos", price: "---", img: "https://lh3.googleusercontent.com/d/1dSc-a_U9VPnm2nWI4ishig0lH1QxKzPd" },
-    { name: "Acessório Guardião", price: "---", img: "https://lh3.googleusercontent.com/d/1SVNiCF7oVBiTns1lPWXp2mA9zH-8a3ul" },
-    { name: "Pulseira da Força", price: "---", img: "https://lh3.googleusercontent.com/d/1y8Q4z0MKxcBrI5hju8HhkldQiLxo8FJH" },
+    { name: "Uniforme Oficial", price: "---", img: IMAGES.PRODUCTS.UNIFORME },
+    { name: "Camiseta Guardião", price: "---", img: IMAGES.PRODUCTS.CAMISETA },
+    { name: "Boné Oficial", price: "---", img: IMAGES.PRODUCTS.BONE },
+    { name: "Kit Elementos", price: "---", img: IMAGES.PRODUCTS.KIT },
+    { name: "Acessório Guardião", price: "---", img: IMAGES.PRODUCTS.ACESSORIO },
+    { name: "Pulseira da Força", price: "---", img: IMAGES.PRODUCTS.PULSEIRA },
   ];
 
   return (
@@ -33,7 +34,7 @@ const AccessoriesPage = () => {
           <Link to="/" className="flex items-center gap-3">
             <div className="w-12 h-12 flex items-center justify-center">
               <img 
-                src="https://lh3.googleusercontent.com/d/1gNAqtTkkfhRBu5kjOUrtXaW-EZ2Qzdn5" 
+                src={IMAGES.LOGO} 
                 alt="Logo" 
                 className="w-full h-full object-contain"
                 referrerPolicy="no-referrer"
@@ -146,7 +147,7 @@ const AccessoriesPage = () => {
           <Link to="/" className="flex flex-col items-center gap-6 text-ar/30 text-[11px] uppercase tracking-[0.3em] font-bold group">
             <div className="w-16 h-16 flex items-center justify-center opacity-50 group-hover:opacity-100 transition-opacity">
               <img 
-                src="https://lh3.googleusercontent.com/d/1gNAqtTkkfhRBu5kjOUrtXaW-EZ2Qzdn5" 
+                src={IMAGES.LOGO} 
                 alt="Logo" 
                 className="w-full h-full object-contain"
                 referrerPolicy="no-referrer"

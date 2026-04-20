@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { ArrowLeft, Scroll, Shield, Brain, Swords, Flame, Heart, Zap, History, Mountain, CheckCircle2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { IMAGES } from "../constants/images";
 
 const LorePage = () => {
   return (
@@ -9,7 +10,7 @@ const LorePage = () => {
       {/* Background Image Wrapper */}
       <div className="fixed inset-0 pointer-events-none z-0">
         <img 
-          src="https://lh3.googleusercontent.com/d/1wkZ-1TKY9YoeWjUtR8-at2WPJh8JuE3v" 
+          src={IMAGES.LORE_BG} 
           alt="Original Lore Background" 
           className="w-full h-full object-cover grayscale opacity-[0.05] contrast-125 brightness-50"
           referrerPolicy="no-referrer"
@@ -27,7 +28,7 @@ const LorePage = () => {
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 flex items-center justify-center">
               <img 
-                src="https://lh3.googleusercontent.com/d/1gNAqtTkkfhRBu5kjOUrtXaW-EZ2Qzdn5" 
+                src={IMAGES.LOGO} 
                 alt="Logo" 
                 className="w-full h-full object-contain"
                 referrerPolicy="no-referrer"
@@ -309,7 +310,7 @@ const LorePage = () => {
           <Link to="/" className="flex flex-col items-center gap-6 text-ar/30 text-[11px] uppercase tracking-[0.3em] font-bold group">
             <div className="w-16 h-16 flex items-center justify-center opacity-50 group-hover:opacity-100 transition-opacity">
               <img 
-                src="https://lh3.googleusercontent.com/d/1gNAqtTkkfhRBu5kjOUrtXaW-EZ2Qzdn5" 
+                src={IMAGES.LOGO} 
                 alt="Logo" 
                 className="w-full h-full object-contain"
                 referrerPolicy="no-referrer"
