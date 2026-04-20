@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", sans-serif;
+
+  --color-fogo: #FF4D00;
+  --color-agua: #0077FF;
+  --color-terra: #2E7D32;
+  --color-ar: #B0BEC5;
+  --color-sombra: #08080A;
+  --color-sagrado: #FFD700;
+}
+
+@layer base {
+  body {
+    @apply bg-sombra text-white font-sans antialiased selection:bg-sagrado selection:text-sombra relative;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-tight text-white;
+  }
+}
+
+.aura-fire {
+  @apply drop-shadow-[0_0_25px_rgba(255,77,0,0.4)];
+}
+
+.aura-water {
+  @apply drop-shadow-[0_0_25px_rgba(0,119,255,0.4)];
+}
+
+.aura-earth {
+  @apply drop-shadow-[0_0_25px_rgba(46,125,50,0.4)];
+}
+
+.aura-air {
+  @apply drop-shadow-[0_0_25px_rgba(176,190,197,0.4)];
+}
+
+.aura-shadow {
+  @apply drop-shadow-[0_0_25px_rgba(8,8,10,0.6)];
+}
+
+.aura-sacred {
+  @apply drop-shadow-[0_0_25px_rgba(255,215,0,0.3)];
+}
+
+/* Glassmorphism utility */
+.glass {
+  @apply bg-white/[0.03] backdrop-blur-xl border border-white/10;
+}
