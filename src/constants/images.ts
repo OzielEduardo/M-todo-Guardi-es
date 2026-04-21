@@ -3,8 +3,8 @@ const getProxiedURL = (url: string) => `https://images.weserv.nl/?url=${encodeUR
 export const IMAGES = {
   LOGO: getProxiedURL("https://lh3.googleusercontent.com/d/1gNAqtTkkfhRBu5kjOUrtXaW-EZ2Qzdn5"),
   HERO_CHILD: getProxiedURL("https://lh3.googleusercontent.com/d/1gNAqtTkkfhRBu5kjOUrtXaW-EZ2Qzdn5"), 
-  DORES_CHILD: getProxiedURL("https://lh3.googleusercontent.com/d/1X7CknNRJ2cPMsSpdhugmF7xf7kgDFspk"),
-  LORE_BG: getProxiedURL("https://lh3.googleusercontent.com/d/1wkZ-1TKY9YoeWjUtR8-at2WPJh8JuE3v"),
+  DORES_CHILD: "https://res.cloudinary.com/dtkawkqk3/image/upload/v1776750949/dores_czmtus.png",
+  LORE_BG: "https://res.cloudinary.com/dtkawkqk3/image/upload/v1776750957/Se%C3%A7%C3%A3o_lore_xtrfr2.png",
   BREATHWORK: getProxiedURL("https://lh3.googleusercontent.com/d/1wzmcToHiyQrP56pG54lucHKpOC4PNcqE"),
   
   // Accessories

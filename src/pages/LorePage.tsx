@@ -11,8 +11,8 @@ const LorePage = () => {
       <div className="fixed inset-0 pointer-events-none z-0">
         <img 
           src={IMAGES.LORE_BG} 
-          alt="Original Lore Background" 
-          className="w-full h-full object-cover grayscale opacity-[0.05] contrast-125 brightness-50"
+          alt="Lore Background" 
+          className="w-full h-full object-cover opacity-20 grayscale brightness-50 contrast-125"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-sombra via-transparent to-sombra" />
       </div>
