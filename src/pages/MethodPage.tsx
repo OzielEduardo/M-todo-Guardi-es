@@ -15,11 +15,11 @@ const MethodPage = () => {
             <span className="text-sm font-medium opacity-60 group-hover:opacity-100 transition-opacity uppercase tracking-widest">Voltar para Início</span>
           </Link>
           <Link to="/" className="flex items-center gap-3">
-            <div className="w-12 h-12 flex items-center justify-center">
+            <div className="w-12 h-12 flex items-center justify-center rounded-full overflow-hidden bg-sombra">
               <img 
                 src={IMAGES.LOGO} 
                 alt="Logo" 
-                className="w-full h-full object-contain"
+                className="w-full h-full object-contain scale-125"
                 referrerPolicy="no-referrer"
               />
             </div>
@@ -209,11 +209,11 @@ const MethodPage = () => {
       <footer className="py-16 border-t border-white/[0.03] bg-black/20">
         <div className="max-w-7xl mx-auto px-4 flex flex-col items-center gap-10">
           <Link to="/" className="flex flex-col items-center gap-4 text-ar/30 text-[10px] uppercase tracking-widest font-bold group">
-            <div className="w-12 h-12 flex items-center justify-center opacity-50 group-hover:opacity-100 transition-opacity">
+            <div className="w-12 h-12 flex items-center justify-center rounded-full overflow-hidden bg-sombra border border-white/10 opacity-50 group-hover:opacity-100 transition-opacity">
               <img 
                 src={IMAGES.LOGO} 
                 alt="Logo" 
-                className="w-full h-full object-contain"
+                className="w-full h-full object-contain scale-125"
                 referrerPolicy="no-referrer"
               />
             </div>

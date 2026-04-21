@@ -30,11 +30,11 @@ const Navigation = () => {
     <nav className="fixed top-0 w-full z-50 bg-sombra/90 backdrop-blur-xl border-b border-white/[0.03]">
       <div className="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-3 group">
-          <div className="w-12 h-12 flex items-center justify-center">
+          <div className="w-12 h-12 flex items-center justify-center rounded-full overflow-hidden bg-sombra">
             <img 
               src={IMAGES.LOGO} 
               alt="Logo" 
-              className="w-full h-full object-contain"
+              className="w-full h-full object-contain scale-125"
               referrerPolicy="no-referrer"
             />
           </div>
@@ -162,11 +162,11 @@ const Hero = () => (
         transition={{ duration: 1 }}
         className="relative flex items-center justify-center p-4"
       >
-        <div className="relative z-10 w-full max-w-lg aspect-square overflow-hidden group">
+        <div className="relative z-10 w-full max-w-lg aspect-square overflow-hidden group bg-sombra rounded-[3rem]">
           <img 
             src={IMAGES.HERO_CHILD} 
             alt="Guardiões dos Elementos" 
-            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000"
+            className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-1000"
             referrerPolicy="no-referrer"
           />
           <div className="hidden absolute inset-0 bg-white/[0.03] backdrop-blur-xl flex items-center justify-center">
@@ -670,11 +670,11 @@ const Footer = () => (
   <footer className="py-12 border-t border-white/[0.03] bg-sombra">
     <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-8">
       <Link to="/" className="flex items-center gap-3 group">
-        <div className="w-12 h-12 flex items-center justify-center">
+        <div className="w-12 h-12 flex items-center justify-center rounded-full overflow-hidden bg-sombra border border-white/10">
           <img 
             src={IMAGES.LOGO} 
             alt="Logo" 
-            className="w-full h-full object-contain"
+            className="w-full h-full object-contain scale-125"
             referrerPolicy="no-referrer"
           />
         </div>
