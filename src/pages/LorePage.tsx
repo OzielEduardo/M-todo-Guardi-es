@@ -13,7 +13,6 @@ const LorePage = () => {
           src={IMAGES.LORE_BG} 
           alt="Original Lore Background" 
           className="w-full h-full object-cover grayscale opacity-[0.05] contrast-125 brightness-50"
-          referrerPolicy="no-referrer"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-sombra via-transparent to-sombra" />
       </div>

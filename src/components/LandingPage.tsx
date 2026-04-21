@@ -168,12 +168,6 @@ const Hero = () => (
             alt="Guardiões dos Elementos" 
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000"
             referrerPolicy="no-referrer"
-            onError={(e) => {
-              const target = e.currentTarget;
-              target.style.display = 'none';
-              const fallback = target.nextElementSibling as HTMLElement;
-              if (fallback) fallback.classList.remove('hidden');
-            }}
           />
           <div className="hidden absolute inset-0 bg-white/[0.03] backdrop-blur-xl flex items-center justify-center">
              <Shield className="w-24 h-24 text-sagrado/40" />
@@ -202,10 +196,6 @@ const Dores = () => (
             alt="Criança isolada em dispositivos digitais" 
             className="w-full aspect-square object-cover grayscale contrast-125 opacity-70 group-hover:scale-110 transition-transform duration-1000"
             referrerPolicy="no-referrer"
-            onError={(e) => {
-              const target = e.currentTarget;
-              target.src = "https://images.unsplash.com/photo-1542027959157-98e6745f4ba7?auto=format&fit=crop&q=80&w=1200";
-            }}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-sombra via-transparent to-transparent opacity-60" />
           <div className="absolute bottom-12 left-12 right-12 p-8 rounded-3xl bg-sombra/40 backdrop-blur-md border border-white/10 hidden md:block">

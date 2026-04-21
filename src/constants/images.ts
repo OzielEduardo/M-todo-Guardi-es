@@ -9,11 +9,10 @@ export const IMAGES = {
   
   // Accessories
   PRODUCTS: {
-    UNIFORME: getProxiedURL("https://lh3.googleusercontent.com/d/10IAXDFFxB9v4DX9iY9mH3pvAMn06cINt"),
-    CAMISETA: getProxiedURL("https://lh3.googleusercontent.com/d/1jAAhcnjVR4xtlHYfY3M2JNT6B9ycPYpp"),
-    BONE: getProxiedURL("https://lh3.googleusercontent.com/d/1DJLK3zTTh3GHvtUGcSoM2JGOvQuWrgLY"),
-    KIT: getProxiedURL("https://lh3.googleusercontent.com/d/1dSc-a_U9VPnm2nWI4ishig0lH1QxKzPd"),
-    ACESSORIO: getProxiedURL("https://lh3.googleusercontent.com/d/1SVNiCF7oVBiTns1lPWXp2mA9zH-8a3ul"),
-    PULSEIRA: getProxiedURL("https://lh3.googleusercontent.com/d/1y8Q4z0MKxcBrI5hju8HhkldQiLxo8FJH"),
+    KIMONO_BRANCO: "https://res.cloudinary.com/dtkawkqk3/image/upload/v1776751007/Kimono_fjjace.jpg",
+    KIMONO_PRETO: "https://res.cloudinary.com/dtkawkqk3/image/upload/v1776751001/Kimono_preto_ve6vjk.jpg",
+    BONE_BRANCO: "https://res.cloudinary.com/dtkawkqk3/image/upload/v1776750989/bon%C3%A9_branco_ip54xo.jpg",
+    // Keep old ones for reference or delete if requested, since user said they'll add others.
+    // I'll replace the old ones with the new set for a clean slate as requested.
   }
 };
