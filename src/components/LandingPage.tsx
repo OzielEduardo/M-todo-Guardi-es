@@ -20,7 +20,11 @@ import {
   Instagram,
   Scroll,
   Menu,
-  X
+  X,
+  Trophy,
+  Star,
+  Crown,
+  Swords
 } from "lucide-react";
 
 const Navigation = () => {
@@ -135,33 +139,26 @@ const Hero = () => (
     <div className="absolute bottom-1/4 -right-1/4 w-[500px] h-[500px] bg-agua/5 blur-[140px] rounded-full" />
 
     <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center relative z-10">
-      <motion.div 
-        initial={{ opacity: 0, x: -50 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.8 }}
-      >
-        <span className="inline-block px-4 py-1 rounded-full bg-white/[0.03] text-sagrado border border-white/10 text-xs font-bold mb-6 uppercase tracking-[0.2em]">
-          Guardiões
-        </span>
-        <h1 className="text-5xl md:text-7xl font-display font-bold leading-[1.1] mb-6 tracking-tighter">
-          Método <span className="text-sagrado italic font-medium">Guardiões</span>
-        </h1>
-        <p className="text-lg text-ar leading-relaxed mb-8 max-w-xl opacity-80">
-          Um programa de formação de identidade e mentalidade infantil que utiliza inteligência emocional, neurociência, breathwork e disciplina marcial para construir crianças emocionalmente fortes, seguras e preparadas para a vida.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4">
-          <div className="flex items-center gap-3 py-2 opacity-50">
-            <span className="text-xs font-medium tracking-wide uppercase">Iniciativa Pedagógica Guardiões</span>
+      <div>
+          <span className="inline-block px-4 py-1 rounded-full bg-white/[0.03] text-sagrado border border-white/10 text-xs font-bold mb-6 uppercase tracking-[0.2em]">
+            Guardiões
+          </span>
+          <h1 className="text-5xl md:text-7xl font-display font-bold leading-[1.1] mb-6 tracking-tighter text-white">
+            Método <span className="text-sagrado italic font-medium">Guardiões</span>
+          </h1>
+          <p className="text-lg text-white leading-relaxed mb-8 max-w-xl">
+            Um programa de <span className="font-bold">formação de identidade</span> e <span className="font-bold">mentalidade infantil</span> que utiliza <span className="text-sagrado font-bold">inteligência emocional</span>, <span className="text-sagrado font-bold">neurociência</span>, <span className="text-sagrado font-bold">breathwork</span> e <span className="text-sagrado font-bold">disciplina marcial</span> para construir crianças emocionalmente fortes, seguras e preparadas para a vida.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex items-center gap-3 py-2">
+              <span className="text-xs font-medium tracking-wide uppercase text-white">Iniciativa Pedagógica Guardiões</span>
+            </div>
           </div>
         </div>
-      </motion.div>
 
-      <motion.div 
-        initial={{ opacity: 0, scale: 0.9 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 1 }}
-        className="relative flex items-center justify-center p-4"
-      >
+        <div 
+          className="relative flex items-center justify-center p-4"
+        >
         <div className="relative z-10 w-full max-w-lg aspect-square overflow-hidden group bg-sombra rounded-[3rem]">
           <img 
             src={IMAGES.HERO_CHILD} 
@@ -176,7 +173,7 @@ const Hero = () => (
         {/* Subtle Decorative Elements */}
         <div className="absolute -top-20 -right-20 w-64 h-64 bg-sagrado/10 blur-[120px] rounded-full opacity-50" />
         <div className="absolute -bottom-20 -left-20 w-64 h-64 bg-fogo/10 blur-[120px] rounded-full opacity-50" />
-      </motion.div>
+      </div>
     </div>
   </section>
 );
@@ -185,10 +182,7 @@ const Dores = () => (
   <section id="dores" className="py-24 relative overflow-hidden">
     <div className="max-w-7xl mx-auto px-4 relative z-10">
       <div className="grid lg:grid-cols-2 gap-16 items-center">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
+        <div
           className="relative group rounded-[3rem] overflow-hidden shadow-2xl shadow-fogo/10 border border-white/5 order-2 lg:order-1"
         >
           <img 
@@ -202,20 +196,16 @@ const Dores = () => (
              <p className="text-xs text-sagrado font-bold uppercase tracking-[0.3em]">Ambiente Digital</p>
              <p className="text-lg text-white font-medium mt-2">O isolamento que as telas geram.</p>
           </div>
-        </motion.div>
+        </div>
 
         <div className="order-1 lg:order-2">
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-          >
+          <div>
             <span className="text-sagrado font-bold uppercase tracking-widest text-sm mb-4 block">Você reconhece isso?</span>
-            <h2 className="text-3xl md:text-5xl font-bold mb-6 tracking-tight">O que nenhuma aula <span className="text-ar/40">convencional</span> resolve</h2>
-            <p className="text-lg text-ar mb-12 opacity-80 leading-relaxed font-light">
-              Seu filho pode ter acesso à melhor escola, ao melhor esporte — e ainda assim enfrentar desafios que nenhum conteúdo técnico resolve.
+            <h2 className="text-3xl md:text-5xl font-bold mb-6 tracking-tight text-white">O que nenhuma aula <span className="text-white">convencional</span> resolve</h2>
+            <p className="text-lg text-white mb-12 leading-relaxed font-light">
+              Seu filho pode ter acesso à melhor escola, ao melhor esporte — e ainda assim enfrentar <span className="text-sagrado font-bold">desafios que nenhum conteúdo técnico resolve</span>.
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid sm:grid-cols-2 gap-6">
             {[
@@ -240,20 +230,16 @@ const Dores = () => (
                 icon: Flame
               }
             ].map((pain, i) => (
-              <motion.div
+              <div
                 key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
                 className="p-8 rounded-[2rem] bg-white/[0.02] border border-white/5 hover:border-sagrado/20 transition-all group"
               >
                 <div className="w-10 h-10 rounded-xl bg-white/[0.03] border border-white/5 flex items-center justify-center mb-6 group-hover:bg-sagrado/10 group-hover:border-sagrado/30 transition-colors">
-                  <pain.icon className="w-5 h-5 text-sagrado/40 group-hover:text-sagrado transition-colors" />
+                  <pain.icon className="w-5 h-5 text-sagrado group-hover:text-sagrado transition-colors" />
                 </div>
                 <h3 className="text-lg font-bold mb-3 text-white">{pain.title}</h3>
-                <p className="text-sm opacity-50 leading-relaxed font-light">{pain.desc}</p>
-              </motion.div>
+                <p className="text-sm text-white leading-relaxed font-light">{pain.desc}</p>
+              </div>
             ))}
           </div>
         </div>
@@ -266,64 +252,50 @@ const Beliefs = () => (
   <section className="py-24 relative overflow-hidden bg-black/40">
     <div className="max-w-7xl mx-auto px-4">
       <div className="max-w-3xl mx-auto text-center mb-16">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-        >
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
-            Mas o problema não está no <span className="text-fogo bg-fogo/10 px-2">comportamento</span> da criança…
+        <div>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-tight text-white">
+            Mas o problema não está no <span className="text-fogo bg-fogo/10 px-4 py-1 rounded-lg">comportamento</span> da criança…
             <br />
-            <span className="text-lg md:text-xl opacity-60 font-light mt-4 block">
+            <span className="text-lg md:text-xl text-white font-light mt-4 block">
               Está no que foi instalado nela sem perceber.
             </span>
           </h2>
-        </motion.div>
+        </div>
       </div>
 
       <div className="grid md:grid-cols-2 gap-16 items-start">
-        <motion.div
-          initial={{ opacity: 0, x: -30 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          className="space-y-8"
-        >
+        <div className="space-y-8">
           <div className="p-8 rounded-3xl bg-white/[0.02] border border-white/5 space-y-6">
             <h3 className="text-xl font-bold text-sagrado tracking-wide uppercase text-sm">Desde cedo, toda criança forma crenças sobre:</h3>
             <ul className="space-y-4">
               {["Quem ela é", "O que ela consegue", "Até onde pode ir"].map((item, i) => (
-                <li key={i} className="flex items-center gap-3 text-lg font-medium">
+                <li key={i} className="flex items-center gap-3 text-lg font-medium text-white">
                   <div className="w-1.5 h-1.5 rounded-full bg-sagrado shadow-[0_0_10px_#FFD700]" />
                   {item}
                 </li>
               ))}
             </ul>
-            <p className="text-sm opacity-40 italic">E a maioria dessas crenças não é construída de forma consciente.</p>
+            <p className="text-sm text-white italic">E a maioria dessas crenças não é construída de forma consciente.</p>
           </div>
 
           <div className="space-y-4 px-4 border-l border-white/10">
-            <p className="text-sm uppercase tracking-[0.2em] text-ar opacity-60">É por isso que muitos adultos crescem com:</p>
+            <p className="text-sm uppercase tracking-[0.2em] text-white">É por isso que muitos adultos crescem com:</p>
             <div className="grid grid-cols-1 gap-3">
               {["Medo de tentar", "Falta de confiança", "Dificuldade em manter constância"].map((text, i) => (
                 <div key={i} className="flex items-center gap-3 py-2 px-4 rounded-lg bg-white/[0.01]">
-                  <CheckCircle2 className="w-4 h-4 text-ar/40" />
-                  <span className="text-sm opacity-80">{text}</span>
+                  <CheckCircle2 className="w-4 h-4 text-white" />
+                  <span className="text-sm text-white">{text}</span>
                 </div>
               ))}
             </div>
             <p className="text-base text-sagrado italic font-medium mt-6">"E depois passam anos tentando se corrigir."</p>
           </div>
-        </motion.div>
+        </div>
 
-        <motion.div
-          initial={{ opacity: 0, x: 30 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          className="relative"
-        >
-          <div className="p-10 rounded-[3rem] bg-gradient-to-br from-sagrado/10 to-transparent border border-sagrado/20 relative z-10 backdrop-blur-sm">
+        <div className="relative">
+          <div className="p-10 rounded-[3rem] bg-sagrado/10 border border-sagrado/20 relative z-10 backdrop-blur-sm">
             <span className="text-sagrado font-bold uppercase tracking-[0.3em] text-[10px] mb-8 block">A virada</span>
-            <h3 className="text-2xl md:text-3xl font-bold mb-8 leading-tight">
+            <h3 className="text-2xl md:text-3xl font-bold mb-8 leading-tight text-white">
               Enquanto o mundo tenta reprogramar adultos…
             </h3>
             <div className="space-y-6">
@@ -331,7 +303,7 @@ const Beliefs = () => (
                 Os <span className="text-sagrado">Guardiões</span> atuam antes disso acontecer.
               </p>
               <div className="space-y-3 pt-6 border-t border-white/5">
-                <p className="text-lg opacity-60 font-light">Não é sobre corrigir depois.</p>
+                <p className="text-lg text-white font-light">Não é sobre corrigir depois.</p>
                 <p className="text-xl md:text-3xl font-bold text-sagrado italic underline decoration-sagrado/30 underline-offset-8">
                   É sobre construir desde o início.
                 </p>
@@ -341,7 +313,7 @@ const Beliefs = () => (
           
           {/* Decorative Glow */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-sagrado/5 blur-[100px] z-0 rounded-full" />
-        </motion.div>
+        </div>
       </div>
     </div>
   </section>
@@ -352,25 +324,20 @@ const Lore = () => (
     <div className="max-w-7xl mx-auto px-4 relative z-10">
       <div className="flex flex-col lg:flex-row gap-16 items-center">
         <div className="lg:w-1/2">
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="space-y-8"
-          >
-            <span className="text-sagrado font-bold uppercase tracking-widest text-sm mb-4 block">A Ordem Milenar</span>
-            <h2 className="text-4xl md:text-6xl font-bold tracking-tighter leading-tight">
+          <div className="space-y-8">
+            <span className="text-sagrado font-bold uppercase tracking-widest text-sm mb-4 block text-white">A Ordem Milenar</span>
+            <h2 className="text-4xl md:text-6xl font-bold tracking-tighter leading-tight text-white">
               Os <span className="text-sagrado italic font-medium">Guardiões</span>
             </h2>
-            <p className="text-xl text-ar/80 leading-relaxed font-light">
-              No Japão feudal, existia uma ordem respeitada não pela força bruta, mas pela maestria sobre a própria mente.
+            <p className="text-xl text-white leading-relaxed font-light">
+              No <span className="font-bold">Japão feudal</span>, existia uma ordem respeitada não pela <span className="font-bold">força bruta</span>, mas pela <span className="text-sagrado font-bold">maestria sobre a própria mente</span>.
             </p>
             <div className="p-8 rounded-3xl bg-white/[0.02] border border-white/5 space-y-4">
-              <p className="text-sm text-ar/60 leading-relaxed italic">
-                “Um guerreiro não é derrotado quando cai… mas quando perde o controle.”
+              <p className="text-sm text-white leading-relaxed italic">
+                “Um guerreiro não é derrotado quando cai… mas quando <span className="text-sagrado font-bold">perde o controle</span>.”
               </p>
               <div className="w-12 h-px bg-sagrado/30" />
-              <p className="text-white font-bold tracking-tight">O treinamento começava com o invisível: o controle das emoções antes do domínio das armas.</p>
+              <p className="text-white font-bold tracking-tight">O treinamento começava com o <span className="font-bold">invisível</span>: o <span className="text-sagrado font-bold">controle das emoções</span> antes do domínio das armas.</p>
             </div>
             <Link 
               to="/lore"
@@ -379,23 +346,18 @@ const Lore = () => (
               Conheça a história completa
               <Scroll className="w-5 h-5 group-hover:rotate-12 transition-transform" />
             </Link>
-          </motion.div>
+          </div>
         </div>
         <div className="lg:w-1/2 relative">
-           <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            className="aspect-[4/5] rounded-[3rem] overflow-hidden border border-white/10 relative group"
-          >
+           <div className="aspect-[4/5] rounded-[3rem] overflow-hidden border border-white/10 relative group">
             <img 
               src={IMAGES.LORE_BG} 
               alt="Legado dos Guardiões" 
               className="w-full h-full object-cover grayscale brightness-[0.7] contrast-125 group-hover:scale-105 transition-transform duration-1000"
               referrerPolicy="no-referrer"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-sombra via-transparent to-transparent opacity-60" />
-          </motion.div>
+            <div className="absolute inset-0 bg-sombra/60" />
+          </div>
           <div className="absolute -z-10 -top-10 -right-10 w-64 h-64 bg-sagrado/10 blur-[100px] rounded-full" />
         </div>
       </div>
@@ -408,8 +370,8 @@ const Benefits = () => (
     <div className="max-w-7xl mx-auto px-4">
       <div className="flex flex-col md:flex-row gap-16 items-center">
         <div className="flex-1">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 tracking-tight">Objetivos de <span className="text-sagrado italic">Desenvolvimento</span></h2>
-          <p className="text-ar text-base opacity-60 leading-relaxed mb-8">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 tracking-tight text-white">Objetivos de <span className="text-sagrado italic">Desenvolvimento</span></h2>
+          <p className="text-white text-base leading-relaxed mb-8">
             A aplicação sistemática da metodologia visa estabelecer competências duradouras que preparam a criança para os desafios da vida adulta.
           </p>
           <div className="space-y-4">
@@ -419,7 +381,7 @@ const Benefits = () => (
               "Fortalecimento da autoestima e segurança social.",
               "Alinhamento com valores familiares e éticos."
             ].map((text, i) => (
-              <div key={i} className="flex gap-3 items-start text-sm text-ar/80">
+              <div key={i} className="flex gap-3 items-start text-sm text-white">
                 <CheckCircle2 className="w-5 h-5 text-sagrado shrink-0" />
                 <span>{text}</span>
               </div>
@@ -430,12 +392,12 @@ const Benefits = () => (
           {[
             { icon: Shield, title: "Segurança", color: "text-sagrado" },
             { icon: Award, title: "Foco", color: "text-terra" },
-            { icon: MessageSquare, title: "Comunicação", color: "text-ar" },
+            { icon: MessageSquare, title: "Comunicação", color: "text-white" },
             { icon: Heart, title: "Empatia", color: "text-fogo" },
           ].map((b, i) => (
             <div key={i} className="bg-white/[0.02] border border-white/[0.05] p-6 rounded-2xl flex flex-col items-center text-center">
               <b.icon className={`w-6 h-6 mb-4 ${b.color}`} />
-              <span className="text-xs uppercase tracking-widest font-bold opacity-60">{b.title}</span>
+              <span className="text-xs uppercase tracking-widest font-bold text-white">{b.title}</span>
             </div>
           ))}
         </div>
@@ -449,72 +411,62 @@ const Breathwork = () => (
     <div className="max-w-7xl mx-auto px-4 relative z-10">
       <div className="flex flex-col lg:flex-row gap-16 items-center">
         <div className="lg:w-1/2">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            className="relative"
-          >
-            <div className="aspect-square rounded-[3rem] border border-white/10 overflow-hidden relative group shadow-2xl shadow-ar/20">
+          <div className="relative">
+            <div className="aspect-square rounded-[3rem] border border-white/10 overflow-hidden relative group shadow-2xl shadow-white/10">
               <img 
                 src={IMAGES.BREATHWORK} 
                 alt="A Ciência da Respiração" 
-                className="w-full h-full object-cover grayscale contrast-125 brightness-75 group-hover:scale-110 transition-transform duration-1000"
+                className="w-full h-full object-cover brightness-110 group-hover:scale-110 transition-transform duration-1000"
                 referrerPolicy="no-referrer"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-sombra via-ar/10 to-transparent opacity-60" />
-              <div className="absolute inset-0 bg-ar/5 mix-blend-color" />
+              <div className="absolute inset-0 bg-linear-to-t from-sombra/80 via-sombra/20 to-transparent" />
               
               <div className="absolute bottom-10 left-10 right-10">
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 rounded-full bg-ar/20 backdrop-blur-md flex items-center justify-center border border-ar/30">
-                    <Wind className="w-6 h-6 text-ar" />
+                  <div className="w-12 h-12 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center border border-white/30">
+                    <Wind className="w-6 h-6 text-white" />
                   </div>
                   <div>
                     <h2 className="text-3xl font-bold tracking-tight text-white mb-0">Breathwork</h2>
-                    <p className="text-[10px] uppercase tracking-[0.3em] text-ar font-bold">A Ciência da Respiração</p>
+                    <p className="text-[10px] uppercase tracking-[0.3em] text-white font-bold">A Ciência da Respiração</p>
                   </div>
                 </div>
               </div>
             </div>
             
-            <div className="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[110%] h-[110%] bg-ar/10 blur-[100px] rounded-full" />
-          </motion.div>
+            <div className="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[110%] h-[110%] bg-white/5 blur-[100px] rounded-full" />
+          </div>
         </div>
 
-        <div className="lg:w-1/2 space-y-8">
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-          >
+        <div className="lg:w-1/2 space-y-8 text-white">
+          <div>
             <h3 className="text-2xl md:text-3xl font-bold mb-4 leading-tight">
-              Por que ensinar técnicas de <span className="text-ar italic">Breathwork</span> para crianças?
+              Por que ensinar técnicas de <span className="text-sagrado italic font-bold">Breathwork</span> para crianças?
             </h3>
-            <p className="text-lg text-ar/80 leading-relaxed font-light">
-              A respiração é uma das ferramentas mais poderosas — e ao mesmo tempo mais ignoradas — no desenvolvimento emocional das crianças.
+            <p className="text-lg leading-relaxed font-light">
+              A <span className="text-sagrado font-bold">respiração</span> é uma das ferramentas mais poderosas — e ao mesmo tempo mais ignoradas — no <span className="font-bold">desenvolvimento emocional</span> das crianças.
             </p>
-          </motion.div>
+          </div>
 
           <div className="space-y-6">
-            <p className="text-base text-ar/60 leading-relaxed">
-              Crianças com desafios como agitação, impulsividade, dificuldade de foco ou até mesmo autismo nível 1 vivem em um estado constante de estímulo e tensão. 
-              <span className="block mt-4 text-white font-medium">
+            <p className="text-base leading-relaxed">
+              Crianças com desafios como <span className="font-bold">agitação, impulsividade, dificuldade de foco</span> ou até mesmo <span className="font-bold">autismo nível 1</span> vivem em um estado constante de estímulo e tensão. 
+              <span className="block mt-4 text-sagrado font-bold">
                 A forma como a criança respira influencia diretamente esse comportamento.
               </span>
             </p>
 
             <div className="p-6 rounded-2xl bg-white/[0.02] border border-white/5 backdrop-blur-sm space-y-4 shadow-xl">
-              <p className="text-sm text-ar/80 leading-relaxed">
-                Quando ensinamos técnicas de Breathwork (respiração consciente), ajudamos a criança a desacelerar o corpo e organizar as emoções.
+              <p className="text-sm leading-relaxed">
+                Quando ensinamos técnicas de <span className="text-sagrado font-bold">Breathwork</span> (respiração consciente), ajudamos a criança a <span className="font-bold">desacelerar o corpo</span> e <span className="font-bold">organizar as emoções</span>.
               </p>
-              <p className="text-sm font-bold text-ar">
-                Respirações profundas e controladas ativam o sistema de relaxamento do cérebro, trazendo mais calma, equilíbrio e clareza mental.
+              <p className="text-sm font-bold">
+                Respirações <span className="text-sagrado font-bold">profundas e controladas</span> ativam o sistema de relaxamento do cérebro, trazendo mais <span className="text-sagrado font-bold">calma, equilíbrio e clareza mental</span>.
               </p>
             </div>
 
             <div className="space-y-4">
-              <p className="text-xs uppercase tracking-widest text-ar/40 font-bold">Na prática, isso significa:</p>
+              <p className="text-xs uppercase tracking-widest text-white font-bold">Na prática, isso significa:</p>
               <div className="grid sm:grid-cols-2 gap-4">
                 {[
                   "Controle emocional em frustrações",
@@ -522,24 +474,24 @@ const Breathwork = () => (
                   "Menos ansiedade e impulsividade",
                   "Segurança e consciência"
                 ].map((item, i) => (
-                  <div key={i} className="flex items-center gap-3 p-3 rounded-xl bg-ar/5 border border-ar/10 transition-all hover:bg-ar/20">
-                    <CheckCircle2 className="w-4 h-4 text-ar shrink-0" />
-                    <span className="text-xs font-medium text-ar/90">{item}</span>
+                  <div key={i} className="flex items-center gap-3 p-3 rounded-xl bg-white/5 border border-white/10 transition-all hover:bg-white/10">
+                    <CheckCircle2 className="w-4 h-4 text-white shrink-0" />
+                    <span className="text-xs font-medium text-white">{item}</span>
                   </div>
                 ))}
               </div>
             </div>
 
-            <p className="text-sm text-ar/60 leading-relaxed italic border-l-2 border-ar/20 pl-6">
-              Além disso, a respiração nasal contínua melhora a oxigenação do cérebro, favorecendo o aprendizado e a retenção de informações.
+            <p className="text-sm leading-relaxed italic border-l-2 border-white pl-6">
+              Além disso, a respiração nasal contínua melhora a oxigenação do cérebro, favorecendo o aprendizado e a reteção de informações.
             </p>
 
             <div className="pt-8 space-y-4">
-              <p className="text-xl md:text-2xl font-bold text-white leading-tight">
-                Mais do que uma técnica, o Breathwork é uma <span className="text-ar italic underline decoration-ar/30 underline-offset-4">habilidade para a vida</span>.
+              <p className="text-xl md:text-2xl font-bold leading-tight">
+                Mais do que uma técnica, o <span className="text-sagrado font-bold uppercase tracking-wider">Breathwork</span> é uma <span className="text-sagrado italic underline decoration-sagrado/30 underline-offset-4 font-bold">habilidade para a vida</span>.
               </p>
-              <p className="text-sm text-ar/70 leading-relaxed">
-                Quando integrado à rotina, ele transforma não só o comportamento da criança, mas também o ambiente ao redor — tornando a casa mais leve, equilibrada e consciente.
+              <p className="text-sm leading-relaxed">
+                Quando integrado à rotina, ele transforma não só o <span className="font-bold">comportamento da criança</span>, mas também o <span className="font-bold">ambiente ao redor</span> — tornando a casa mais leve, equilibrada e consciente.
               </p>
             </div>
           </div>
@@ -549,14 +501,89 @@ const Breathwork = () => (
   </section>
 );
 
+const GoalStructure = () => (
+  <section className="py-32 relative overflow-hidden bg-sombra">
+    <div className="max-w-7xl mx-auto px-4 relative z-10">
+      <div className="text-center mb-20 text-white">
+        <h2 className="text-4xl md:text-5xl font-bold mb-6 tracking-tighter">Estrutura de Metas e Objetivos</h2>
+        <p className="text-xl text-sagrado font-bold mb-8 uppercase tracking-[0.2em] text-sm italic underline decoration-sagrado/30 underline-offset-8">Sistema de Bótons e Progressão Permanente</p>
+        <p className="text-lg max-w-3xl mx-auto leading-relaxed text-white font-medium">
+          A progressão exige a validação de <span className="text-sagrado font-bold">competências emocionais</span>, <span className="text-sagrado font-bold">respiratórias</span> e <span className="text-sagrado font-bold">comportamentais</span> em ambientes como casa, dojô e escola de forma permanente.
+        </p>
+      </div>
+
+      <div className="grid lg:grid-cols-2 gap-12">
+        {/* Trilha do Guardião */}
+        <div className="p-10 rounded-[3rem] bg-white/[0.02] border border-white/5 space-y-10 group hover:border-sagrado/20 transition-all">
+          <div className="space-y-4">
+            <div className="w-16 h-16 rounded-2xl bg-sagrado/10 flex items-center justify-center text-sagrado mb-6">
+              <Shield className="w-8 h-8" />
+            </div>
+            <h3 className="text-3xl font-bold text-white">1. Trilha do Guardião</h3>
+            <p className="text-sagrado font-bold text-xs uppercase tracking-[0.2em]">Fase Iniciante • Foco em Acolhimento e Base</p>
+          </div>
+
+          <div className="grid gap-6">
+            {[
+              { title: "Guardião em Treinamento", desc: "Porta de entrada. Foco em acolhimento.", icon: Star },
+              { title: "Guardião Bronze", desc: "Validação da conduta e tarefas de “Eu Sou”.", icon: Shield },
+              { title: "Guardião Prata", desc: "Domínio das técnicas básicas de respiração.", icon: Wind },
+              { title: "Guardião Ouro", desc: "Consolidação da fase inicial e preparação para transição.", icon: Trophy }
+            ].map((step, i) => (
+              <div key={i} className="flex gap-6 p-6 rounded-2xl bg-white/[0.02] border border-white/5 hover:bg-white/[0.04] transition-all transform hover:-translate-y-1">
+                <div className="w-12 h-12 rounded-xl bg-white/[0.03] border border-white/5 flex items-center justify-center text-sagrado shrink-0">
+                  <step.icon className="w-5 h-5" />
+                </div>
+                <div>
+                  <h4 className="text-lg font-bold text-white mb-1">{step.title}</h4>
+                  <p className="text-sm text-white font-light opacity-80 leading-relaxed">{step.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Trilha da Elite */}
+        <div className="p-10 rounded-[3rem] bg-sagrado/[0.03] border border-sagrado/10 space-y-10 group hover:border-sagrado/30 transition-all">
+          <div className="space-y-4">
+            <div className="w-16 h-16 rounded-2xl bg-sagrado/20 flex items-center justify-center text-sagrado mb-6">
+              <Crown className="w-8 h-8" />
+            </div>
+            <h3 className="text-3xl font-bold text-white">2. Trilha da Elite</h3>
+            <p className="text-sagrado font-bold text-xs uppercase tracking-[0.2em]">Alunos Graduados / Pré-Adolescentes</p>
+          </div>
+
+          <div className="grid gap-6">
+            {[
+              { title: "Elite", desc: "Transição para maturidade técnica.", icon: Swords },
+              { title: "Elite Beta", desc: "Prática de resiliência e autorregulação.", icon: Brain },
+              { title: "Elite Alpha", desc: "Liderança positiva e decisões conscientes.", icon: Zap },
+              { title: "Elite Black", desc: "Honraria máxima: autonomia total e altruísmo.", icon: Trophy }
+            ].map((step, i) => (
+              <div key={i} className="flex gap-6 p-6 rounded-2xl bg-sagrado/10 border border-sagrado/10 hover:bg-sagrado/20 transition-all transform hover:-translate-y-1">
+                <div className="w-12 h-12 rounded-xl bg-sagrado/20 border border-sagrado/30 flex items-center justify-center text-sagrado shrink-0">
+                  <step.icon className="w-5 h-5" />
+                </div>
+                <div>
+                  <h4 className="text-lg font-bold text-white mb-1">{step.title}</h4>
+                  <p className="text-sm text-white font-light opacity-80 leading-relaxed">{step.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+);
 const HowItWorks = () => (
   <section className="py-24 bg-white/[0.02] border-y border-white/[0.02]">
     <div className="max-w-7xl mx-auto px-4">
-      <div className="text-center mb-20">
+      <div className="text-center mb-20 text-white">
         <h2 className="text-4xl md:text-5xl font-bold mb-6 tracking-tighter">A solução</h2>
-        <p className="text-xl text-sagrado font-medium mb-4 uppercase tracking-[0.2em] text-sm italic">Não é uma aula. É uma formação de identidade.</p>
-        <p className="text-lg text-ar/70 max-w-2xl mx-auto leading-relaxed italic">
-          Cada etapa foi desenhada para construir quem a criança vai se tornar — não apenas o que ela sabe fazer.
+        <p className="text-xl text-sagrado font-bold mb-4 uppercase tracking-[0.2em] text-sm italic">Não é uma aula. É uma formação de identidade.</p>
+        <p className="text-lg max-w-2xl mx-auto leading-relaxed italic">
+          Cada <span className="font-bold">etapa</span> foi desenhada para construir <span className="text-sagrado font-bold">quem a criança vai se tornar</span> — não apenas o que ela sabe fazer.
         </p>
       </div>
 
@@ -564,17 +591,16 @@ const HowItWorks = () => (
         {[
           { title: "Sistema de progressão", desc: "Evolução estruturada em etapas claras que formam mentalidade de crescimento desde cedo.", icon: Award },
           { title: "Formação com propósito", desc: "Planos pedagógicos com objetivos definidos que vão muito além de técnicas físicas.", icon: BookOpen },
-          { title: "Experiência gamificada", desc: "Cartas, desafios e recompensas que transformam virtudes em conquistas reais.", icon: Zap },
           { title: "Disciplina e identidade através do karatê", desc: "O karatê como ferramenta de formação de caráter, não apenas como esporte.", icon: Shield },
           { title: "Neurociência aplicada", desc: "Técnicas de respiração, foco e regulação emocional baseadas em evidências científicas.", icon: Brain },
           { title: "Inteligência emocional", desc: "Autoconhecimento, empatia e autocontrole que a criança leva para a vida inteira.", icon: Heart },
         ].map((item, i) => (
-          <div key={i} className="p-8 rounded-3xl border border-white/[0.03] bg-white/[0.01] hover:bg-white/[0.03] transition-all group">
+          <div key={i} className="p-8 rounded-3xl border border-white/[0.03] bg-white/[0.01] hover:bg-white/[0.03] transition-all group text-white">
             <div className="w-12 h-12 rounded-xl bg-sagrado/10 flex items-center justify-center text-sagrado mb-6 group-hover:scale-110 transition-transform">
               <item.icon className="w-6 h-6" />
             </div>
             <h3 className="text-xl font-bold mb-3">{item.title}</h3>
-            <p className="text-sm text-ar/60 leading-relaxed font-light">{item.desc}</p>
+            <p className="text-sm text-white leading-relaxed font-light">{item.desc}</p>
           </div>
         ))}
       </div>
@@ -585,12 +611,12 @@ const HowItWorks = () => (
 const CTA = () => (
   <section className="py-32 relative overflow-hidden bg-sombra">
     <div className="max-w-3xl mx-auto px-4 text-center relative z-10">
-      <h2 className="text-4xl md:text-5xl font-bold mb-8 tracking-tighter">
-        Deseja aprofundar seu conhecimento sobre os <span className="text-sagrado">Guardiões</span>?
+      <h2 className="text-4xl md:text-5xl font-bold mb-8 tracking-tighter text-white">
+        Deseja aprofundar seu conhecimento sobre os <span className="text-sagrado font-bold">Guardiões</span>?
       </h2>
-      <p className="text-lg text-ar mb-12 opacity-60 leading-relaxed">
-        Disponibilizamos materiais complementares e informações detalhadas sobre como iniciar 
-        o processo de acompanhamento pedagógico.
+      <p className="text-lg text-white mb-12 font-medium leading-relaxed">
+        Disponibilizamos <span className="font-bold">materiais complementares</span> e <span className="font-bold">informações detalhadas</span> sobre como iniciar 
+        o processo de <span className="text-sagrado font-bold">acompanhamento pedagógico</span>.
       </p>
       <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
         <Link 
@@ -611,7 +637,7 @@ const Results = () => {
     { title: "Controle emocional em situações reais", icon: Droplets, color: "text-agua" },
     { title: "Respeito como valor, não imposição", icon: Heart, color: "text-fogo" },
     { title: "Foco e constância desde cedo", icon: Award, color: "text-sagrado" },
-    { title: "Capacidade de tomar boas decisões", icon: Sun, color: "text-ar" },
+    { title: "Capacidade de tomar boas decisões", icon: Sun, color: "text-white" },
     { title: "Mentalidade preparada para o futuro", icon: Zap, color: "text-fogo" },
   ];
 
@@ -619,47 +645,35 @@ const Results = () => {
     <section className="py-24 relative overflow-hidden bg-black/40">
       <div className="max-w-7xl mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl md:text-5xl font-bold mb-4 tracking-tighter">Resultados</h2>
+          <div>
+            <h2 className="text-3xl md:text-5xl font-bold mb-4 tracking-tighter text-white">Resultados</h2>
             <p className="text-sagrado text-xl font-medium mb-6 uppercase tracking-[0.2em] text-sm">O que seu filho leva para a vida inteira</p>
-            <p className="text-ar text-lg max-w-2xl mx-auto opacity-60 leading-relaxed">
-              Habilidades que não se aprendem na escola — e que definem o adulto que ele vai se tornar.
+            <p className="text-white text-lg max-w-2xl mx-auto leading-relaxed">
+              <span className="font-bold">Habilidades</span> que não se aprendem na escola — e que definem o <span className="text-sagrado font-bold">adulto que ele vai se tornar</span>.
             </p>
-          </motion.div>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
           {results.map((res, i) => (
-            <motion.div
+            <div
               key={i}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
               className="group p-8 rounded-3xl border border-white/[0.03] bg-white/[0.01] hover:bg-white/[0.02] hover:border-white/[0.08] transition-all duration-500 flex flex-col items-center text-center relative overflow-hidden"
             >
-              <div className="absolute inset-0 bg-gradient-to-b from-white/[0.02] to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="absolute inset-0 bg-white/[0.02] opacity-0 group-hover:opacity-100 transition-opacity" />
               <div className={`w-16 h-16 rounded-2xl bg-white/[0.02] border border-white/[0.05] flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500 relative z-10`}>
                 <res.icon className={`w-8 h-8 ${res.color}`} />
               </div>
-              <h3 className="text-base font-bold leading-tight relative z-10">{res.title}</h3>
-            </motion.div>
+              <h3 className="text-base font-bold leading-tight relative z-10 text-white">{res.title}</h3>
+            </div>
           ))}
           
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.8 }}
+          <div
             className="lg:col-span-1 p-8 rounded-3xl bg-sagrado/[0.05] border border-sagrado/20 flex flex-col justify-center items-center text-center group"
           >
             <ArrowRight className="w-8 h-8 text-sagrado mb-4 group-hover:translate-x-2 transition-transform" />
             <p className="text-xs font-bold uppercase tracking-widest text-sagrado">Preparação Integral</p>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>
@@ -680,27 +694,27 @@ const Footer = () => (
         </div>
         <span className="text-lg font-display font-bold tracking-wider uppercase group-hover:text-sagrado transition-colors">GUARDIÕES</span>
       </Link>
-      <div className="text-ar/40 text-sm font-medium">
+      <div className="text-white text-sm font-medium">
         © 2026 Guardiões. Todos os direitos reservados.
       </div>
       <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
         <nav className="flex gap-6">
-          <Link to="/lore" className="text-ar/60 hover:text-sagrado text-sm font-medium transition-colors">História</Link>
-          <Link to="/metodo" className="text-ar/60 hover:text-sagrado text-sm font-medium transition-colors">Método</Link>
-          <Link to="/acessorios" className="text-ar/60 hover:text-sagrado text-sm font-medium transition-colors">Acessórios</Link>
+          <Link to="/lore" className="text-white hover:text-sagrado text-sm font-medium transition-colors">História</Link>
+          <Link to="/metodo" className="text-white hover:text-sagrado text-sm font-medium transition-colors">Método</Link>
+          <Link to="/acessorios" className="text-white hover:text-sagrado text-sm font-medium transition-colors">Acessórios</Link>
         </nav>
         <div className="flex gap-6">
           <a
             href="https://www.instagram.com/metodo_guardioes/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-ar/40 hover:text-sagrado transition-colors"
+            className="text-white hover:text-sagrado transition-colors"
             aria-label="Instagram"
           >
             <Instagram className="w-5 h-5" />
           </a>
           {[CheckCircle2, MessageSquare, Shield].map((Icon, i) => (
-            <div key={i} className="text-ar/40 hover:text-sagrado transition-colors cursor-pointer">
+            <div key={i} className="text-white hover:text-sagrado transition-colors cursor-pointer">
               <Icon className="w-5 h-5" />
             </div>
           ))}
@@ -718,6 +732,7 @@ export default function LandingPage() {
       <Dores />
       <Beliefs />
       <HowItWorks />
+      <GoalStructure />
       <Lore />
       <Benefits />
       <Breathwork />
