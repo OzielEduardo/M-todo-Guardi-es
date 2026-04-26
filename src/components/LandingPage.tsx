@@ -147,7 +147,7 @@ const Hero = () => (
             Método <span className="text-sagrado italic font-medium">Guardiões</span>
           </h1>
           <p className="text-lg text-white leading-relaxed mb-8 max-w-xl">
-            Um programa de <span className="font-bold">formação de identidade</span> e <span className="font-bold">mentalidade infantil</span> que utiliza <span className="text-sagrado font-bold">inteligência emocional</span>, <span className="text-sagrado font-bold">neurociência</span>, <span className="text-sagrado font-bold">breathwork</span> e <span className="text-sagrado font-bold">disciplina marcial</span> para construir crianças emocionalmente fortes, seguras e preparadas para a vida.
+            Um programa de <span className="font-bold">formação de identidade</span> e <span className="font-bold">mentalidade infantil</span> que utiliza <span className="text-sagrado font-bold">inteligência emocional</span>, <span className="text-sagrado font-bold">neurociência</span>, <span className="text-sagrado font-bold">breathwork</span> e <span className="text-sagrado font-bold">disciplina marcial (Karate)</span> para construir crianças emocionalmente fortes, seguras e preparadas para a vida.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <div className="flex items-center gap-3 py-2">

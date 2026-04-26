@@ -138,8 +138,8 @@ const MethodPage = () => {
             />
             <PillarCard 
               icon={BookOpen} 
-              title="Gamificação e Narrativa" 
-              desc="Álbum de figurinhas baseado em uma história, onde a criança avança por fases de habilidades físicas, emocionais e comportamentais." 
+              title="Sistema de Bótons e Progressão Permanente" 
+              desc="A progressão exige a validação de competências emocionais, respiratórias e comportamentais em ambientes como casa, dojô e escola de forma permanente." 
               color="text-sagrado"
             />
             <PillarCard 
