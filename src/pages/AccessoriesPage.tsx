@@ -16,6 +16,12 @@ const AccessoriesPage = () => {
     { name: "Kimono Branco", price: "---", img: IMAGES.PRODUCTS.KIMONO_BRANCO },
     { name: "Kimono Preto", price: "---", img: IMAGES.PRODUCTS.KIMONO_PRETO },
     { name: "Boné Branco", price: "---", img: IMAGES.PRODUCTS.BONE_BRANCO },
+    { name: "Camiseta Branca", price: "---", img: IMAGES.PRODUCTS.CAMISA_BRANCA },
+    { name: "Camiseta Preta", price: "---", img: IMAGES.PRODUCTS.CAMISA_PRETA },
+    { name: "Camiseta Vermelha", price: "---", img: IMAGES.PRODUCTS.CAMISA_VERMELHA },
+    { name: "Camiseta Azul Marinho", price: "---", img: IMAGES.PRODUCTS.CAMISA_AZUL },
+    { name: "Camiseta Cinza", price: "---", img: IMAGES.PRODUCTS.CAMISA_CINZA },
+    { name: "Camiseta Marrom", price: "---", img: IMAGES.PRODUCTS.CAMISA_MARROM },
   ];
 
   return (

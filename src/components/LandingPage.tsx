@@ -24,7 +24,8 @@ import {
   Trophy,
   Star,
   Crown,
-  Swords
+  Swords,
+  Quote
 } from "lucide-react";
 
 const Navigation = () => {
@@ -147,7 +148,7 @@ const Hero = () => (
             Método <span className="text-sagrado italic font-medium">Guardiões</span>
           </h1>
           <p className="text-lg text-white leading-relaxed mb-8 max-w-xl">
-            Um programa de <span className="font-bold">formação de identidade</span> e <span className="font-bold">mentalidade infantil</span> que utiliza <span className="text-sagrado font-bold">inteligência emocional</span>, <span className="text-sagrado font-bold">neurociência</span>, <span className="text-sagrado font-bold">breathwork</span> e <span className="text-sagrado font-bold">disciplina marcial (Karate)</span> para construir crianças emocionalmente fortes, seguras e preparadas para a vida.
+            Um programa de <span className="font-bold">formação de identidade</span> e <span className="font-bold">mentalidade infantil</span> que utiliza <span className="text-sagrado font-bold">inteligência emocional</span>, <span className="text-sagrado font-bold">neurociência</span>, <span className="text-sagrado font-bold">breathwork</span> e <span className="text-sagrado font-bold">disciplina marcial (Karatê)</span> para construir crianças emocionalmente fortes, seguras e preparadas para a vida.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <div className="flex items-center gap-3 py-2">
@@ -608,6 +609,36 @@ const HowItWorks = () => (
   </section>
 );
 
+const FamilyTestimonials = () => (
+  <section className="py-24 relative overflow-hidden">
+    <div className="max-w-7xl mx-auto px-4 relative z-10">
+      <div className="text-center mb-16">
+        <h2 className="text-3xl md:text-5xl font-bold mb-4 tracking-tighter text-white">Relatos das Famílias</h2>
+        <p className="text-sagrado text-xl font-medium mb-6 uppercase tracking-[0.2em] text-sm">O impacto real no dia a dia</p>
+      </div>
+
+      <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-8">
+        {[
+          "Maravilha Sensei, fiquei até emocionado pela questão que ele levantou que está orgulhoso de si, e também orgulhoso do Sensei, esse reconhecimento me da uma alegria interna sem explicação. Nós estamos aqui em família sim realizando o direcionamento com a devida explicação, ele se sente muito bem ao ver o resultado que consegue ao ter o direcionamento correto.",
+          "Inicialmente o objetivo era a socialização para o Davi, estar em grupos diferentes, com pessoas diferentes. Para o Benício pensamos em auto regulação e o respeito pelos colegas. Mas hoje já fica muito claro que os aprendizados irão além dessas questões e estamos muito contentes! Obrigada",
+          "Ele é outra criança pós karatê 🙏 Muuuuuitoo bom, incrível. Primeira frase dele ao sair do Dojo.... Mãe vc ouviu né, é pra vc tirar se eu não fizer o que tem de ser feito ou se eu não me comportar, mas eu vou continuar a fazer tudo certo vc vai ver 🫡🫠 derreti de orgulho 😅 Ele saiu segurando o boton até em casa e correu pra mostrar p vó todo feliz e orgulhoso Extremamente satisfatório viver isso, serei sempre grata a ti"
+        ].map((quote, i) => (
+          <div key={i} className="p-10 rounded-[3rem] bg-white/[0.02] border border-white/5 relative group hover:bg-white/[0.04] transition-all">
+            <Quote className="w-10 h-10 text-sagrado/20 absolute top-8 right-10 group-hover:text-sagrado/40 transition-colors" />
+            <p className="text-base text-white font-light leading-relaxed italic relative z-10">
+              "{quote}"
+            </p>
+            <div className="mt-8 flex items-center gap-4">
+              <div className="w-1.5 h-1.5 rounded-full bg-sagrado shadow-[0_0_10px_#FFD700]" />
+              <span className="text-xs font-bold uppercase tracking-widest text-sagrado/60">Depoimento real</span>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+);
+
 const CTA = () => (
   <section className="py-32 relative overflow-hidden bg-sombra">
     <div className="max-w-3xl mx-auto px-4 text-center relative z-10">
@@ -737,6 +768,7 @@ export default function LandingPage() {
       <Benefits />
       <Breathwork />
       <Results />
+      <FamilyTestimonials />
       <CTA />
       <Footer />
     </div>

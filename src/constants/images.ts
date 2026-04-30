@@ -12,7 +12,11 @@ export const IMAGES = {
     KIMONO_BRANCO: "https://res.cloudinary.com/dtkawkqk3/image/upload/v1776751007/Kimono_fjjace.jpg",
     KIMONO_PRETO: "https://res.cloudinary.com/dtkawkqk3/image/upload/v1776751001/Kimono_preto_ve6vjk.jpg",
     BONE_BRANCO: "https://res.cloudinary.com/dtkawkqk3/image/upload/v1776750989/bon%C3%A9_branco_ip54xo.jpg",
-    // Keep old ones for reference or delete if requested, since user said they'll add others.
-    // I'll replace the old ones with the new set for a clean slate as requested.
+    CAMISA_BRANCA: "https://res.cloudinary.com/dtkawkqk3/image/upload/v1777519561/Camisa_Branca_blnzol.png",
+    CAMISA_PRETA: "https://res.cloudinary.com/dtkawkqk3/image/upload/v1777519561/Camisa_preta_hbhuqt.png",
+    CAMISA_VERMELHA: "https://res.cloudinary.com/dtkawkqk3/image/upload/v1777519561/Camisa_Vermelha_quqsmz.png",
+    CAMISA_AZUL: "https://res.cloudinary.com/dtkawkqk3/image/upload/v1777519561/Camisa_Azul_Marinho_gk2ylo.png",
+    CAMISA_CINZA: "https://res.cloudinary.com/dtkawkqk3/image/upload/v1777519561/Camisa_Cinza_orxkjs.png",
+    CAMISA_MARROM: "https://res.cloudinary.com/dtkawkqk3/image/upload/v1777519561/Camisa_Marrom_xcsx4b.png",
   }
 };
