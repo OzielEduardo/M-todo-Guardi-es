@@ -166,7 +166,7 @@ const AccessoriesPage = () => {
             <Link to="/acessorios" className="text-white hover:text-sagrado text-xs font-bold uppercase tracking-widest transition-colors">Acessórios</Link>
           </nav>
 
-          <p className="text-white text-[10px] uppercase tracking-[0.3em] font-bold">© 2026 GUARDIÕES • LOJA OFICIAL</p>
+          <p className="text-white text-[10px] uppercase tracking-[0.3em] font-bold">© 2026 MÉTODO GUARDIÕES™ • LOJA OFICIAL</p>
         </div>
       </footer>
     </div>

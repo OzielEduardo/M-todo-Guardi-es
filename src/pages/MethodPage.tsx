@@ -220,7 +220,7 @@ const MethodPage = () => {
             <Link to="/acessorios" className="text-white hover:text-sagrado text-[10px] font-bold uppercase tracking-widest transition-colors">Acessórios</Link>
         </nav>
           
-          <p className="text-white text-[9px] uppercase tracking-[0.4em] font-bold">© 2026 GUARDIÕES • DESENVOLVIMENTO INFANTIL INTEGRAL</p>
+          <p className="text-white text-[9px] uppercase tracking-[0.4em] font-bold">© 2026 MÉTODO GUARDIÕES™ • DESENVOLVIMENTO INFANTIL INTEGRAL</p>
         </div>
       </footer>
     </div>

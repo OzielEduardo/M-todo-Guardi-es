@@ -313,7 +313,7 @@ const LorePage = () => {
             <Link to="/acessorios" className="text-white hover:text-sagrado text-xs font-bold uppercase tracking-widest transition-colors">Acessórios</Link>
           </nav>
 
-          <p className="text-white text-[10px] uppercase tracking-[0.3em] font-bold">© 2026 GUARDIÕES • LEGADO ANTIGO, TREINAMENTO MODERNO</p>
+          <p className="text-white text-[10px] uppercase tracking-[0.3em] font-bold">© 2026 MÉTODO GUARDIÕES™ • LEGADO ANTIGO, TREINAMENTO MODERNO</p>
         </div>
       </footer>
     </div>

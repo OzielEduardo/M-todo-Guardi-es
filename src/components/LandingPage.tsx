@@ -726,7 +726,7 @@ const Footer = () => (
         <span className="text-lg font-display font-bold tracking-wider uppercase group-hover:text-sagrado transition-colors">GUARDIÕES</span>
       </Link>
       <div className="text-white text-sm font-medium">
-        © 2026 Guardiões. Todos os direitos reservados.
+        © 2026 Método Guardiões™. Todos os direitos reservados.
       </div>
       <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
         <nav className="flex gap-6">
